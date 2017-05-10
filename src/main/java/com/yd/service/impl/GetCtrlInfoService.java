@@ -1,0 +1,62 @@
+package com.yd.service.impl;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import com.yd.model.CtrlNode;
+
+import net.sf.json.JSONArray;
+import net.sf.json.JSONObject;
+
+import com.yd.service.IGetCtrlInfo;
+import com.yd.util.TheUtil;
+
+
+
+public class GetCtrlInfoService implements IGetCtrlInfo {
+	private static String XMLUrl = "http://192.168.224.26:8181/restconf/operational/network-topology:network-topology/topology/ovsdb:1";
+	@Override
+	public List<CtrlNode> getCtrlBean() {
+		String json = TheUtil.getXMLDoc(XMLUrl);
+		List<CtrlNode> list = new ArrayList<CtrlNode>();
+		JSONObject jsonTopo = JSONObject.fromObject(json);
+		JSONArray jsonArray =jsonTopo.getJSONArray("topology");
+		String topologyId = (String)((JSONObject)jsonArray.get(0)).get("topology-id");
+		System.out.println(topologyId);
+		/*
+		if("ovsdb:1".equals(topologyId)){
+			type="vSwitch";
+		}
+		*/
+		//包含所有节点对象的数组
+		JSONArray nodeArray = ((JSONObject)jsonArray.get(0)).getJSONArray("node");
+		List<String> ctrlList = new ArrayList<String>();
+		for(int i=0;i<nodeArray.size();i++){
+			JSONObject jsonObj =(JSONObject) nodeArray.get(i);//节点对象
+			String dbVersion = (String)jsonObj.get("ovsdb:db-version");
+			//System.out.println(dbVersion);
+			if(dbVersion!=null){//表连接的节点
+				String ip = (String)jsonObj.getJSONObject("ovsdb:connection-info").get("local-ip");
+				System.out.println(ip);
+				if(!ctrlList.contains(ip)){
+					ctrlList.add(ip);
+				}
+			}
+				
+		}
+		System.out.println(ctrlList.size());
+		for(int i=0 ; i< ctrlList.size();i++){
+			String name = ctrlList.get(i);
+			int category = 0;
+			String version = "3.0.7";
+			String value = "ip:"+ctrlList.get(i)+"<br/>version:"+version;
+			CtrlNode ctrlNode = new CtrlNode(name,category,value);
+			list.add(ctrlNode);
+		}
+		return list;
+	}
+	public static void main(String[] args){
+		GetCtrlInfoService gcis = new GetCtrlInfoService();
+		gcis.getCtrlBean();
+	}
+}

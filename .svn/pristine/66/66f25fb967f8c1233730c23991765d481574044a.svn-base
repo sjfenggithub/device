@@ -1,0 +1,242 @@
+<li id="controlMess" ng-controller="aContrl">
+    <div class="control_title">
+        控制器信息
+    </div>
+    <div id="canvas">
+        <div ng-class="{'twoStyle':two,'threeStyle':three,'fiveStyle':five,'sevenStyle':seven}" >
+            <div class="circle" ></div>
+                <div class="show" ng-repeat="item in data.Theserver" ng-init="$scope.item.isShow=false">
+                <img ng-src="./images/{{item.role}}.png" alt=""  ng-mouseenter="isShow(item);" ng-mouseleave="isHide(item);" />
+                <p class="float"  ng-show="item.isShow" >
+                    集群IP：{{item.ip}}<br/>
+                    角色：{{item.role}}<br/>
+                    服务器IP：{{item.versionnumber}}
+                </p>
+                </div>
+            <div class="vip">VIP:{{data.ips}}</div>
+        </div>
+    </div>
+    <div class="list">
+        <div class="head">基本信息</div>
+        <div class=" Bcontent">
+            <ul class="title">
+                <li class="ip">IP</li>
+                <li class="role">角色</li>
+                <li class="feature">Feature列</li>
+                <li class="version">版本</li>
+            </ul>
+            <ul>
+                <li  ng-repeat="items in data.Theserver">
+                    <ul>
+                        <li class="ip">{{items.ip}}</li>
+                        <li class="role" ng-click="newData()">{{items.role}}</li>
+                        <li class="feature"  ng-mouseenter="showList(items);" ng-mouseleave="hideList(items)" ng-init="$scope.items.isShow1=false">{{items.Featurelistof}}</li>
+                        <textarea name="" id="" cols="30" rows="10" readonly="readonly" ng-mouseenter="showWin(items);" ng-mouseleave="hideWin(items)" ng-init="$scope.items.isShowWin=false"  ng-show="items.isShowWin||items.isShow1">{{items.Featurelistof}}</textarea>
+                        <li class="version">{{items.versionnumber}}</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="tab">
+        <div class="head">下联网络设备</div>
+        <div class="Ctrlcontent">
+            <ul class="tabList">
+                <li class="click">Switch</li>
+                <li>Gateway</li>
+                <li>FW</li>
+            </ul>
+            <ul class="tabContent clearfix">
+                <li class="switchCon">
+                    <div class="VirtualSwt">
+                        <div class="Stitle">虚拟交换机列表</div>
+                        <div class="Slist clearfix">
+                            <ul class="local">
+                                <li>local</li>
+                                <li><div class="ip">IP</div><div class="port">端口</div><div class="detail">
+                                    详情</div>
+								</li>
+                                <li ng-repeat="item in data.listData.virtualSwt.local">
+								    <div class="ip">{{item.ip}}</div>
+                                    <div class="port">{{item.port}}</div>
+                                    <div class="detail">
+                                      <a ng-href="#/switchCtrl" ng-click="turn(item.ip)"></a>
+                                    </div>
+                                </li>
+                                
+                            </ul>
+                            <ul class="remote">
+                                <li>remote</li>
+                                <li>
+								   <div class="ip">IP</div><div class="port">端口</div><div class="detail">
+                                    详情</div>
+								</li>
+                                <li ng-repeat="item in data.listData.virtualSwt.remote">
+                                    <div class="ip">{{item.ip}}</div>
+                                    <div class="port">{{item.port}}</div>
+                                    <div class="detail">
+                                      <a ng-href="#/switchCtrl" ng-click="turn(item.ip)"/></a>
+									</div>
+                             
+                                </li>
+                               
+                            </ul>
+                        </div>
+                    </div>
+					
+                    <div class="physicalSwt">
+                        <div class="Stitle">物理交换机列表</div>
+                        <div class="Slist clearfix">
+                            <ul class="local">
+                                <li>local</li>
+                                <li><div class="ip">IP</div><div class="port">端口</div><div class="deta">详情</div></li>
+                                <li ng-repeat="item in data.listData.physicalSwt.local">
+                                    <div class="ip">{{item.ip}}</div>
+                                    <div class="port">{{item.port}}</div>
+                                    <div class="detail">
+                                        <a ng-href="./switch_angular.html"></a>
+                                    </div>
+                                </li>
+                               
+                            </ul>
+                            <ul class="remote">
+                                <li>remote</li>
+                                <li><div class="ip">IP</div><div class="port">端口</div><div class="deta">详情</div></li>
+                                <li ng-repeat="item in data.listData.physicalSwt.remote">
+                                    <div class="ip">{{item.ip}}</div>
+                                    <div class="port">{{item.port}}</div>
+                                    <div class="detail">
+                                        <a ng-href="./switch_angular.html"></a>
+                                    </div>
+                                </li>
+                               
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="Gateway">
+                    <div class="physicalSwt">
+                        <div class="Stitle">Gateway列表</div>
+                        <div class="Slist clearfix">
+                                <ul class="nav">
+                                    <li class="ip">IP</li>
+                                    <li class="vendor">厂商</li>
+                                    <li class="version">版本号</li>
+                                    <li class="detail">详情</li>
+                                </ul>
+                                <ul class="list" ng-repeat="item in data.listData.gateway">
+                                    <li class="ip">{{item.ip}}</li>
+                                    <li class="vendor">{{item.vendor}}</li>
+                                    <li class="version">{{item.version}}</li>
+                                    <li class="detail">
+                                        <a ng-href="{{item.href}}"></a>
+                                    </li>
+                                </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="FW">
+                    <div class="physicalSwt">
+                        <div class="Stitle">FW列表</div>
+                        <div class="Slist clearfix">
+                            <ul class="nav">
+                                <li class="ip">IP</li>
+                                <li class="vendor">厂商</li>
+                                <li class="version">版本号</li>
+                                <li class="detail">详情</li>
+                            </ul>
+                            <ul class="list" ng-repeat="item in data.listData.fw">
+                                <li class="ip">{{item.ip}}</li>
+                                <li class="vendor">{{item.vendor}}</li>
+                                <li class="version">{{item.version}}</li>
+                                <li class="detail">
+                                    <a ng-href="{{item.href}}"></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</li>
+<script>
+    var $tabList=$('#controlMess>.tab>.Ctrlcontent>.tabList');
+    var $tabListL=$('#controlMess>.tab>.Ctrlcontent>.tabList>li');
+    var $tabContent=$('#controlMess>.tab>.Ctrlcontent>.tabContent');
+    var $tabContentList=$('#controlMess>.tab>.Ctrlcontent>.tabContent>li');
+    $tabList.on('mouseover','li', function () {
+        var index=$(this).index();
+        $tabListL.each(function () {
+            $(this).removeClass('hover').removeClass('click');
+        });
+        $($tabListL[index]).addClass('hover');
+    });
+    $tabList.on('click','li', function () {
+        var index=$(this).index();
+        $tabListL.each(function () {
+            $(this).removeClass('hover').removeClass('click');
+        });
+        $($tabListL[index]).addClass('click');
+        $tabContentList.each(function () {
+            $(this).hide();
+        });
+        $($tabContentList[index]).show();
+    });
+    var $allPic=$('#canvas>div');
+    var $canvas=$('#canvas>div>.float');
+    var $canvas1=$('#canvas>div>p');
+    var $img=$('#canvas>div>img');
+    $img.each(function () {
+        $(this).on('mouseenter', function () {
+            var index=parseInt($(this).index());
+                if(index==1){
+                    if($($canvas[0]).css('display')=='none') {
+                        $($canvas[0]).show();
+                    }
+                }else if(index==3){
+                    if($($canvas[1]).css('display')=='none') {
+                        $($canvas[1]).show();
+                    }
+                }else{
+                    if($($canvas[2]).css('display')=='none') {
+                        $($canvas[2]).show();
+                    }
+                }
+        });
+        $(this).on('mouseleave', function () {
+            var index=parseInt($(this).index());
+            if(index==1){
+                if($($canvas[0]).css('display')=='block') {
+                    $($canvas[0]).hide();
+                }
+            }else if(index==3){
+                if($($canvas[1]).css('display')=='block') {
+                    $($canvas[1]).hide();
+                }
+            }else{
+                if($($canvas[2]).css('display')=='block') {
+                    $($canvas[2]).hide();
+                }
+            }
+        })
+    });
+    var $window=$('#controlMess>.list>.Bcontent>ul:nth-of-type(2) #window');
+    var $listCon=$window.children('.listCon');
+    var $listBar=$window.children('.listBar');
+    var $scrollBar=$listBar.children('.scrollBar');
+    var $listConH=$listCon.height();
+    var $listBarH=$listBar.height();
+    var scale=$window.height()/$listConH;
+    $scrollBar.height(scale*150);
+    $scrollBar.on('mousedown', function (e) {
+        var spaceY= e.clientY-$scrollBar.offset().top+document.body.scrollTop;
+        $listBar.on('mousemove', function (e) {
+            var y= e.clientY-spaceY-$listBar.offset().top+document.body.scrollTop;
+            y=y<0?0:y;
+            y=y>$listBar.height()-$scrollBar.height()?$listBar.height()-$scrollBar.height():y;
+            $scrollBar.css({top:y+'px'});
+            $listCon.css({top:-y*scale+'px'});
+        })
+    });
+</script>

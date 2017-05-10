@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="css/base.css"/>
+    <link rel="stylesheet" href="css/aero_index.css"/>
+    <script src="js/jquery-3.1.0.js"></script>
+    <script src="js/echarts.js"></script>
+</head>
+<body ng-app="aeroApp" ng-controller="aeroCtrl">
+<div class="left">
+    <div class="logo">
+        <img src="images/logo_03.png" alt=""/>
+    </div>
+    <ul>
+        <li>
+            <a ui-sref="aTopology" class="now">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;网络拓扑</a>
+        </li>
+        <li>
+            <a ui-sref="aContrl">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;控制器信息</a>
+        </li>
+        <li>
+            <a ui-sref="switchCtrl">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;交换机信息</a>
+        </li>
+        <li>
+            <a ui-sref="openflow">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;故障定位</a>
+            <ul class="faultList">
+                <li><a ui-sref="openflow">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;openflow</a></li>
+                <li><a ui-sref="node">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ovs&nbsp;node</a></li>
+                <li><a ui-sref="interface">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ovs&nbsp;interface</a></li>
+                <li><a ui-sref="vtn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;vtn</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+<div class="right">
+    <div class="head">
+        <div class="top">
+            <div class="login">
+                <span><img src="images/touxiang.gif" alt=""/></span>
+                <span>swfdvgsg</span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <ul>
+            <div ui-view></div>
+        </ul>
+    </div>
+</div>
+</body>
+<script src="js/angular.js"></script>
+<script src="js/angular-animate.js"></script>
+<script src="js/angular-route.js"></script>
+<script src="js/angular-ui-router.js"></script>
+<script src="module/aeroModule.js"></script>
+<script src="module/aeroRouter.js"></script>
+<script src="controller/vtnCtrl.js"></script>
+<script src="controller/openflowCtrl.js"></script>
+<script src="controller/nodeCtrl.js"></script>
+<script src="controller/interfaceCtrl.js"></script>
+<script src="controller/switchCtrl.js"></script>
+<script src="controller/aContrl.js"></script>
+<script src="controller/aTopologyTpl.js"></script>
+<script src="js/setServer.js">
+</script>
+<script>
+    $(function () {
+        var $content=$('.left>ul>li>a');
+        $('.left>ul>li').on('mouseover','a', function () {
+            $content.each(function () {
+                $(this).removeClass('now');
+            })
+            $(this).addClass('now');
+        });
+        var $tabList=$('#controlMess .tab .tabList');
+        var $tabContent=$('#controlMess .tab .tabContent');
+        var $conLi=$tabContent.children('li');
+        var $tabLi=$tabList.children('li');
+        $tabList.on('mouseenter','li', function () {
+            $tabLi.each(function () {
+                $(this).removeClass('hover').removeClass('click');
+            });
+            $(this).addClass('hover');
+        });
+        $tabList.on('mouseleave', function () {
+            $tabLi.each(function () {
+                $(this).removeClass('hover');
+            });
+        });
+        $tabList.on('click','li', function () {
+            $tabLi.each(function () {
+                $(this).removeClass('hover').removeClass('click');
+            });
+            $(this).addClass('click');
+            var index=$(this).index();
+            $conLi.each(function () {
+                $(this).hide();
+            });
+            $($conLi[index]).show();
+        });
+        var $falut=$('.left>ul>li:nth-of-type(4)>a');
+        var $falutList=$('.left>ul>li:nth-of-type(4)>ul');
+        $falut.on('click', function () {
+            if($falutList.css('display')=='none'){
+                $falutList.show();
+            }else{
+                $falutList.hide();
+            }
+        });
+        var $falutLisLt=$('.left>ul>li:nth-of-type(4)>ul>li>a');
+        $falutList.on('mouseover','a', function () {
+            $falutLisLt.each(function () {
+                $falutLisLt.removeClass('current').removeClass('now');
+            });
+            $(this).addClass('current');
+        });
+    });
+</script>
+</html>

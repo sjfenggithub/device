@@ -1,0 +1,121 @@
+<li id="vtn" ng-controller="vtnCtrl">
+    <div class="title">VTN查询</div>
+    <div class="select">
+        查询条件：
+        <select id="firstS" ng-model="firstS" ng-change="selectChange();">
+            <option value="Port">Neutron Port</option>
+            <option value="Subnet">Neutron Subnet</option>
+            <option value="Network">Neutron Network</option>
+            <option value="Router">Neutron Router</option>
+            <option value="FloatingIP">Neutron FloatingIP</option>
+            <option value="SecurityGroup">Neutron SecurityGroup</option>
+            <option value="SecurityGroupRule">Neutron SecurityGroupRule</option>
+        </select>
+        <select id="SecondS" ng-model="SecondS"  ng-options="item for item in data">
+        </select>
+        <input type="text" id="threeS"/>
+        <button>确定</button>
+    </div>
+    <div class="content">
+        <ul>
+            <li id="port" ng-if="firstS=='Port'">
+                <ul class="titleT">
+                    <li>ID</li>
+                    <li>name</li>
+                    <li>mac address</li>
+                    <li>fixed ips</li>
+                </ul>
+                <ul class="listC clearfix" ng-repeat="items in portData">
+                    <li>{{items.id}}</li>
+                    <li>{{items.name}}</li>
+                    <li>{{items.mac}}</li>
+                    <li ng-mouseenter="showList(items);" ng-mouseleave="hideList(items);">{{items.fixed}}</li>
+                    <p ng-if="items.isShow">{{items.fixed}}</p>
+                </ul>
+            </li>
+            <li id="network" ng-if="firstS=='Network'">
+                <ul class="titleT">
+                    <li>id</li>
+                    <li>name</li>
+                    <li>subnets</li>
+                </ul>
+                <ul class="listC" ng-repeat="items in netData">
+                    <li>{{items.id}}</li>
+                    <li>{{items.name}}</li>
+                    <li>{{items.subnets}}</li>
+                </ul>
+            </li>
+            <li id="subnet" ng-if="firstS=='Subnet'">
+                <ul class="titleT">
+                    <li>id</li>
+                    <li>name</li>
+                    <li>cidr</li>
+                    <li>allocation_pools</li>
+                </ul>
+                <ul class="listC" ng-repeat="items in subData">
+                    <li>{{items.id}}</li>
+                    <li>{{items.name}}</li>
+                    <li>{{items.cidr}}</li>
+                    <li>{{items.pools}}</li>
+                </ul>
+            </li>
+            <li id="router" ng-if="firstS=='Router'">
+                <ul class="titleT">
+                    <li>id</li>
+                    <li>name</li>
+                    <li>external_gateway_info</li>
+                </ul>
+                <ul class="listC clearfix" ng-repeat="items in routerData">
+                    <li>{{items.id}}</li>
+                    <li>{{items.name}}</li>
+                    <li ng-mouseenter="showList(items);" ng-mouseleave="hideList(items);">{{items.external}}</li>
+                    <p ng-if="items.isShow">{{items.external}}</p>
+                </ul>
+            </li>
+            <li id="floatingIP" ng-if="firstS=='FloatingIP'">
+                <ul class="titleT">
+                    <li>id</li>
+                    <li>fixed_ip_address</li>
+                    <li>floating_ip_address</li>
+                    <li>port_id</li>
+                </ul>
+                <ul class="listC" ng-repeat="items in flaotData">
+                    <li>{{items.id}}</li>
+                    <li>{{items.fixed}}</li>
+                    <li>{{items.flaoting}}</li>
+                    <li>{{items.port}}</li>
+                </ul>
+            </li>
+            <li id="securitygroup" ng-if="firstS=='SecurityGroup'">
+                <ul class="titleT">
+                    <li>id</li>
+                    <li>name</li>
+                    <li>description</li>
+                </ul>
+                <ul class="listC" ng-repeat="items in secuData">
+                    <li>{{items.id}}</li>
+                    <li>{{items.name}}</li>
+                    <li>{{items.description}}</li>
+                </ul>
+            </li>
+            <li id="securitygrouprule" ng-if="firstS=='SecurityGroupRule'">
+                <ul class="titleT">
+                    <li>id</li>
+                    <li>security_group</li>
+                    <li>direction</li>
+                    <li>protocol</li>
+                    <li>remote_ip_prefix</li>
+                    <li>remote_group</li>
+                </ul>
+                <ul class="listC" ng-repeat="items in secugrData">
+                    <li>{{items.id}}</li>
+                    <li>{{items.security}}</li>
+                    <li>{{items.direction}}</li>
+                    <li>{{items.protocol}}</li>
+                    <li>{{items.prefix}}</li>
+                    <li>{{items.group}}</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</li>

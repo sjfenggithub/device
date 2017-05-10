@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.yd.test.TestSwitch
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.639 sec - in com.yd.test.TestSwitch

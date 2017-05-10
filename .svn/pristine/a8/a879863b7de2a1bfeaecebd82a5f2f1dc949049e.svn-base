@@ -1,0 +1,326 @@
+{
+    "number": "3",
+    "ips": "192.182.4.4",
+    "Theserver": [
+        {
+            "ip": "192.168.224.29",
+            "role": "master",
+            "versionnumber": "3.0.7",
+            "Featurelistof": "  standard                                      
+								config                                        
+								region                                        
+								package                                       
+								http                                          
+								war                                           
+								kar                                           
+								ssh                                           
+								management                                    
+								odl-mdsal-dom                                 
+								odl-mdsal-common                              
+								odl-mdsal-dom-api                             
+								odl-mdsal-dom-broker                          
+								odl-mdsal-binding-base                        
+								odl-mdsal-binding-runtime                     
+								odl-mdsal-binding-api                         
+								odl-mdsal-binding-dom-adapter                 
+								odl-mdsal-eos-common                          
+								odl-mdsal-eos-dom                             
+								odl-mdsal-eos-binding                         
+								odl-mdsal-singleton-common                    
+								odl-mdsal-singleton-dom                       
+								odl-ovsdb-openstack                           
+								odl-openflowplugin-nxm-extensions             
+								odl-config-persister                          
+								odl-config-startup                            
+								odl-aaa-shiro                                 
+								odl-mdsal-common                              
+								odl-mdsal-broker-local                        
+								odl-mdsal-xsql                                
+								odl-mdsal-clustering-commons                  
+								odl-mdsal-distributed-datastore               
+								odl-mdsal-remoterpc-connector                 
+								odl-mdsal-broker                              
+								odl-mdsal-clustering                          
+								odl-mdsal-models                              
+								odl-restconf                                  
+								odl-restconf-noauth                           
+								odl-mdsal-apidocs                             
+								odl-openflowjava-protocol                     
+								odl-yangtools-yang-data                       
+								odl-yangtools-common                          
+								odl-yangtools-yang-parser                     
+								odl-openflowplugin-flow-services              
+								odl-openflowplugin-southbound                 
+								odl-openflowplugin-nsf-model                  
+								odl-openflowplugin-app-config-pusher          
+								odl-openflowplugin-app-topology               
+								odl-openflowplugin-app-forwardingrules-manager
+								odl-config-netty                              
+								odl-neutron-service                           
+								odl-neutron-northbound-api                    
+								odl-neutron-spi                               
+								odl-neutron-transcriber                       
+								pax-jetty                                     
+								pax-http                                      
+								pax-http-whiteboard                           
+								pax-war                                       
+								odl-ovsdb-library                             
+								odl-netty                                     
+								odl-lmax                                      
+								odl-aaa-api                                   
+								odl-akka-scala                                
+								odl-akka-system                               
+								odl-akka-clustering                           
+								odl-akka-leveldb                              
+								odl-akka-persistence                          
+								odl-aaa-authn                                 
+								odl-config-api                                
+								odl-config-netty-config-api                   
+								odl-config-core                               
+								odl-config-manager                            
+								odl-ovsdb-southbound-api                      
+								odl-ovsdb-southbound-impl                     
+								odl-ovsdb-southbound-impl-rest                
+								odl-ovsdb-southbound-impl-ui"     			
+        },
+        {
+            "ip": "192.168.223.29",
+            "role": "slave",
+            "versionnumber": "3.0.7",
+            "Featurelistof": "  standard                                      
+								config                                        
+								region                                        
+								package                                       
+								http                                          
+								war                                           
+								kar                                           
+								ssh                                           
+								management                                    
+								odl-mdsal-dom                                 
+								odl-mdsal-common                              
+								odl-mdsal-dom-api                             
+								odl-mdsal-dom-broker                          
+								odl-mdsal-binding-base                        
+								odl-mdsal-binding-runtime                     
+								odl-mdsal-binding-api                         
+								odl-mdsal-binding-dom-adapter                 
+								odl-mdsal-eos-common                          
+								odl-mdsal-eos-dom                             
+								odl-mdsal-eos-binding                         
+								odl-mdsal-singleton-common                    
+								odl-mdsal-singleton-dom                       
+								odl-ovsdb-openstack                           
+								odl-openflowplugin-nxm-extensions             
+								odl-config-persister                          
+								odl-config-startup                            
+								odl-aaa-shiro                                 
+								odl-mdsal-common                              
+								odl-mdsal-broker-local                        
+								odl-mdsal-xsql                                
+								odl-mdsal-clustering-commons                  
+								odl-mdsal-distributed-datastore               
+								odl-mdsal-remoterpc-connector                 
+								odl-mdsal-broker                              
+								odl-mdsal-clustering                          
+								odl-mdsal-models                              
+								odl-restconf                                  
+								odl-restconf-noauth                           
+								odl-mdsal-apidocs                             
+								odl-openflowjava-protocol                     
+								odl-yangtools-yang-data                       
+								odl-yangtools-common                          
+								odl-yangtools-yang-parser                     
+								odl-openflowplugin-flow-services              
+								odl-openflowplugin-southbound                 
+								odl-openflowplugin-nsf-model                  
+								odl-openflowplugin-app-config-pusher          
+								odl-openflowplugin-app-topology               
+								odl-openflowplugin-app-forwardingrules-manager
+								odl-config-netty                              
+								odl-neutron-service                           
+								odl-neutron-northbound-api                    
+								odl-neutron-spi                               
+								odl-neutron-transcriber                       
+								pax-jetty                                     
+								pax-http                                      
+								pax-http-whiteboard                           
+								pax-war                                       
+								odl-ovsdb-library                             
+								odl-netty                                     
+								odl-lmax                                      
+								odl-aaa-api                                   
+								odl-akka-scala                                
+								odl-akka-system                               
+								odl-akka-clustering                           
+								odl-akka-leveldb                              
+								odl-akka-persistence                          
+								odl-aaa-authn                                 
+								odl-config-api                                
+								odl-config-netty-config-api                   
+								odl-config-core                               
+								odl-config-manager                            
+								odl-ovsdb-southbound-api                      
+								odl-ovsdb-southbound-impl                     
+								odl-ovsdb-southbound-impl-rest                
+								odl-ovsdb-southbound-impl-ui"  
+        },
+        {
+            "ip": "192.168.222.29",
+            "role": "slave",
+            "versionnumber": "3.5.7",
+            "Featurelistof": "  standard                                      
+								config                                        
+								region                                        
+								package                                       
+								http                                          
+								war                                           
+								kar                                           
+								ssh                                           
+								management                                    
+								odl-mdsal-dom                                 
+								odl-mdsal-common                              
+								odl-mdsal-dom-api                             
+								odl-mdsal-dom-broker                          
+								odl-mdsal-binding-base                        
+								odl-mdsal-binding-runtime                     
+								odl-mdsal-binding-api                         
+								odl-mdsal-binding-dom-adapter                 
+								odl-mdsal-eos-common                          
+								odl-mdsal-eos-dom                             
+								odl-mdsal-eos-binding                         
+								odl-mdsal-singleton-common                    
+								odl-mdsal-singleton-dom                       
+								odl-ovsdb-openstack                           
+								odl-openflowplugin-nxm-extensions             
+								odl-config-persister                          
+								odl-config-startup                            
+								odl-aaa-shiro                                 
+								odl-mdsal-common                              
+								odl-mdsal-broker-local                        
+								odl-mdsal-xsql                                
+								odl-mdsal-clustering-commons                  
+								odl-mdsal-distributed-datastore               
+								odl-mdsal-remoterpc-connector                 
+								odl-mdsal-broker                              
+								odl-mdsal-clustering                          
+								odl-mdsal-models                              
+								odl-restconf                                  
+								odl-restconf-noauth                           
+								odl-mdsal-apidocs                             
+								odl-openflowjava-protocol                     
+								odl-yangtools-yang-data                       
+								odl-yangtools-common                          
+								odl-yangtools-yang-parser                     
+								odl-openflowplugin-flow-services              
+								odl-openflowplugin-southbound                 
+								odl-openflowplugin-nsf-model                  
+								odl-openflowplugin-app-config-pusher          
+								odl-openflowplugin-app-topology               
+								odl-openflowplugin-app-forwardingrules-manager
+								odl-config-netty                              
+								odl-neutron-service                           
+								odl-neutron-northbound-api                    
+								odl-neutron-spi                               
+								odl-neutron-transcriber                       
+								pax-jetty                                     
+								pax-http                                      
+								pax-http-whiteboard                           
+								pax-war                                       
+								odl-ovsdb-library                             
+								odl-netty                                     
+								odl-lmax                                      
+								odl-aaa-api                                   
+								odl-akka-scala                                
+								odl-akka-system                               
+								odl-akka-clustering                           
+								odl-akka-leveldb                              
+								odl-akka-persistence                          
+								odl-aaa-authn                                 
+								odl-config-api                                
+								odl-config-netty-config-api                   
+								odl-config-core                               
+								odl-config-manager                            
+								odl-ovsdb-southbound-api                      
+								odl-ovsdb-southbound-impl                     
+								odl-ovsdb-southbound-impl-rest                
+								odl-ovsdb-southbound-impl-ui"  
+        }
+    ],
+    "NFV": [
+        {
+            "name": "NFV-1",
+            "category": 1,
+            "type":"Gateway",
+            "value":"IP:192.168.1.0<br/>厂家:IBM<br/>版本:9.0.3<br/>",
+            "url":"http://192.168.16.154:8080/NFV-DSM/login.jsp"
+        },
+        {
+            "name": "NFV-2",
+            "category": 1,
+            "type":"Gateway",
+            "value":"IP:192.168.2.2<br/>厂家:IBM<br/>版本:8.0.3",
+            "url":"http://192.168.16.154:8080/NFV-DSM/login.jsp"
+            
+        },
+        {
+            "name": "NFV-3",
+            "category": 1,
+            "type":"FW",
+             "value":"IP:192.168.3.3<br/>厂家:IBM<br/>版本:9.0.3",
+             "url":"http://192.168.16.154:8080/NFV-DSM/login.jsp"
+        }, {
+            "name": "NFV-4",
+            "category": 1,
+            "type":"FW",
+             "value":"IP:192.168.4.5<br/>厂家 :IBM<br/>版本:1.0.3",
+             "url":"http://www.sina.com.cn"
+        }, {
+            "name": "NFV-5",
+            "category": 1,
+            "type":"Gateway",
+             "value":"IP:192.168.6.1<br/>厂家:IBM<br/>版本:9.5.3",
+             "url":"http://www.suning.com"
+        }
+    ],	
+    "edge": [
+        {
+            "source": "192.168.224.26",
+            "target": "NFV-1",
+            "value":10
+
+        },
+        {
+            "source": "192.168.224.26",
+            "target": "NFV-2",
+            "value":10
+        },
+        {
+            "source": "192.168.224.26",
+            "target": "NFV-3",
+            "value":20
+        },
+        {
+            "source": "192.168.224.26",
+            "target": "NFV-4",
+            "value":10
+
+        },
+        {
+            "source": "192.168.224.26",
+            "target": "NFV-5",
+            "value":80
+        },
+        {
+            "source": "192.168.224.26",
+            "target": "dot",
+            "value":70
+        } 
+    ],
+    "dot": [
+        {
+            "name": "more",
+            "category": 2,
+            "value":"总数：1000<br/>按type统计数：100"
+        }
+    ]			
+}

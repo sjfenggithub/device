@@ -1,0 +1,33 @@
+<li id="node" ng-controller="nodeCtrl">
+    <div class="title">ovs node查询</div>
+    <div class="select">
+        查询条件：
+        <select id="firstS" ng-model="firstS" ng-change="selectChange();">
+            <option value="switch ip">switch ip</option>
+            <option value="dpid">dpid</option>
+            <option value="Neutron Port ID">Neutron Port ID</option>
+            <option value="租户ID + portIP">租户ID + portIP</option>
+        </select>
+        <input id="SecondS" ng-model="SecondS" >
+        </input>
+        <button>确定</button>
+    </div>
+    <div class="content">
+        <ul class="titleT">
+            <li>ovs IP</li>
+            <li>bridge name</li>
+            <li>of-switch MAC</li>
+            <li>of-switch dpid</li>
+            <li>vm count</li>
+            <li>tunnel count</li>
+        </ul>
+        <ul class="listC" ng-repeat="items in nodeData">
+            <li>{{items.ip}}</li>
+            <li>{{items.bridge}}</li>
+            <li>{{items.mac}}</li>
+            <li>{{items.dpid}}</li>
+            <li>{{items.vm}}</li>
+            <li>{{items.tunnel}}</li>
+        </ul>
+    </div>
+</li>

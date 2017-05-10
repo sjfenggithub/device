@@ -1,0 +1,7 @@
+<li id="topology" ng-controller="aTopologyCtrl">
+
+</li>
+<script>
+    var myChart=echarts.init($('#topology')[0]);
+    setServer();
+</script>

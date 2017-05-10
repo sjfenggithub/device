@@ -1,0 +1,3428 @@
+@font-face {
+    font-family: "icons";
+    src: url("../fonts/icomoon.eot");
+    src: url("../fonts/icomoon.eot?#iefix") format("embedded-opentype"), url("../fonts/icomoon.woff") format("woff"), url("../fonts/icomoon.ttf") format("truetype"), url("../fonts/icomoon.svg#icons") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+body {
+    width: 100%;
+    height: 100%;
+    font-family: "Microsoft Yahei";
+}
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+.head {
+    width: 100%;
+    height: 60px;
+    background-color: #fff;
+}
+.head .top {
+    width: 100%;
+    height: 59px;
+    border-bottom: 1px solid #E7E7E7;
+}
+.head .top .login {
+    float: right;
+    width: 20%;
+    height: 59px;
+}
+.head .top .login span {
+    font-family: icons, "Microsoft Yahei";
+    margin-right: 5%;
+}
+.head .top .login span:nth-child(1) img {
+    margin-top: -8px;
+}
+.head .top .login span:nth-child(2) {
+    font-size: 18px;
+    line-height: 59px;
+}
+.head .top .login span:nth-child(3) {
+    font-size: 24px;
+    line-height: 59px;
+}
+.left {
+    width: 156px;
+    height: 768px;
+    /* height: 100%;
+     overflow: hidden;*/
+    background-color: #292B31;
+    float: left;
+    position: fixed;
+}
+.left .logo {
+    width: 156px;
+    height: 110px;
+    padding-top: 60px;
+}
+.left .logo img {
+    display: block;
+    width: 140px;
+    margin: 0 auto;
+}
+.left ul li {
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    font-family: icons, "Microsoft Yahei";
+    font-size: 14px;
+    color: #fff;
+    cursor: pointer;
+}
+.left ul li a {
+    display: block;
+    width: 100%;
+    height: 60px;
+    color: #fff;
+    cursor: pointer;
+}
+.left ul li a:hover {
+    color: #fff;
+}
+.left ul li a.now {
+    border-left: 4px solid #4B97DB;
+    background-color: #212329;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    /* Firefox */
+}
+.left ul li .faultList {
+    display: none;
+    width: 156px;
+    height: 100%;
+}
+.left ul li .faultList li {
+    width: 156px;
+    height: 60px;
+    line-height: 60px;
+}
+.left ul li .faultList li.current {
+    border-left: 4px solid #4B97DB;
+    background-color: #212329;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    /* Firefox */
+}
+.right {
+    width: 100%;
+    height: 100%;
+    padding-left: 156px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+.right .head {
+    width: 100%;
+    height: 60px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+.right .content {
+    width: 98%;
+    height: 100%;
+    margin: 9px auto 0;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    color: #000;
+    font-size: 14px;
+}
+.right .content ul {
+    width: 100%;
+    height: 100%;
+}
+.right .content ul li {
+    width: 100%;
+    height: 100%;
+}
+.right .content ul li#topology {
+    width: 100%;
+    height: 588px;
+}
+.right .content ul li#switchMess .switch_title {
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    font-size: 18px;
+    font-weight: bold;
+}
+.right .content ul li#switchMess #main {
+    width: 100%;
+    height: 264px;
+}
+.right .content ul li#switchMess #main .pic {
+    margin: 0 auto;
+    width: 1035px;
+    height: 196px;
+    padding-top: 50px;
+    position: relative;
+    background: url("../images/physical switch.png") no-repeat center;
+    z-index: 1;
+}
+.right .content ul li#switchMess #main .pic div {
+    display: none;
+}
+.right .content ul li#switchMess #main .pic div.floating {
+    position: absolute;
+    height: 75px;
+    line-height: 30px;
+    border: 1px solid #EEEEEE;
+    text-align: center;
+    background-color: #fff;
+}
+.right .content ul li#switchMess #main .pic div.floating::after {
+    content: "";
+    position: absolute;
+    top: 75px;
+    left: 30px;
+    width: 0px;
+    height: 0px;
+    border-width: 10px 5px 0px 5px;
+    border-color: #fff transparent;
+    border-style: solid;
+    z-index: 100;
+}
+.right .content ul li#switchMess #main .pic div.color1 {
+    display: block;
+    top: 30px;
+    left: 0;
+}
+.right .content ul li#switchMess #main .pic div.color2 {
+    display: block;
+    top: 60px;
+    left: 0;
+}
+.right .content ul li#switchMess #main .pic div.color3 {
+    display: block;
+    top: 30px;
+    left: 40px;
+}
+.right .content ul li#switchMess #main .pic div.color4 {
+    display: block;
+    top: 60px;
+    left: 40px;
+}
+.right .content ul li#switchMess #main .pic div.color5 {
+    display: block;
+    top: 30px;
+    left: 80px;
+}
+.right .content ul li#switchMess #main .pic div.color6 {
+    display: block;
+    top: 60px;
+    left: 80px;
+}
+.right .content ul li#switchMess #main .pic span {
+    display: block;
+    width: 26px;
+    height: 20px;
+    position: absolute;
+    cursor: pointer;
+}
+.right .content ul li#switchMess #main .pic span:nth-of-type(1) {
+    top: 121px;
+    left: 27px;
+}
+.right .content ul li#switchMess #main .pic span:nth-of-type(2) {
+    top: 152px;
+    left: 27px;
+}
+.right .content ul li#switchMess #main .pic span:nth-of-type(3) {
+    top: 121px;
+    left: 64px;
+}
+.right .content ul li#switchMess #main .pic span:nth-of-type(4) {
+    top: 152px;
+    left: 64px;
+}
+.right .content ul li#switchMess #main .pic span:nth-of-type(5) {
+    top: 121px;
+    left: 101px;
+}
+.right .content ul li#switchMess #main .pic span:nth-of-type(6) {
+    top: 152px;
+    left: 101px;
+}
+.right .content ul li#switchMess #main .pic span:nth-of-type(7) {
+    top: 121px;
+    left: 139px;
+}
+.right .content ul li#switchMess #main .pic span:nth-of-type(8) {
+    top: 152px;
+    left: 139px;
+}
+.right .content ul li#switchMess #main .pic span:nth-of-type(9) {
+    top: 121px;
+    left: 174px;
+}
+.right .content ul li#switchMess #main .pic span:nth-of-type(10) {
+    top: 152px;
+    left: 174px;
+}
+.right .content ul li#switchMess #main .pic span:nth-of-type(11) {
+    top: 121px;
+    left: 212px;
+}
+.right .content ul li#switchMess #main .pic span:nth-of-type(12) {
+    top: 152px;
+    left: 212px;
+}
+.right .content ul li#switchMess #main .pic span:nth-of-type(13) {
+    top: 121px;
+    left: 248px;
+}
+.right .content ul li#switchMess #main .pic span:nth-of-type(14) {
+    top: 152px;
+    left: 248px;
+}
+.right .content ul li#switchMess #main .pic span:nth-of-type(15) {
+    top: 121px;
+    left: 286px;
+}
+.right .content ul li#switchMess #main .pic span:nth-of-type(16) {
+    top: 152px;
+    left: 286px;
+}
+.right .content ul li#switchMess #main .pic span:nth-of-type(17) {
+    top: 121px;
+    left: 322px;
+}
+.right .content ul li#switchMess #main .pic span:nth-of-type(18) {
+    top: 152px;
+    left: 322px;
+}
+.right .content ul li#switchMess #main .pic span:nth-of-type(19) {
+    top: 121px;
+    left: 360px;
+}
+.right .content ul li#switchMess #main .pic span:nth-of-type(20) {
+    top: 152px;
+    left: 360px;
+}
+.right .content ul li#switchMess #main .pic span:nth-of-type(21) {
+    top: 121px;
+    left: 397px;
+}
+.right .content ul li#switchMess #main .pic span:nth-of-type(22) {
+    top: 152px;
+    left: 397px;
+}
+.right .content ul li#switchMess #main .pic span:nth-of-type(23) {
+    top: 121px;
+    left: 434px;
+}
+.right .content ul li#switchMess #main .pic span:nth-of-type(24) {
+    top: 152px;
+    left: 434px;
+}
+.right .content ul li#switchMess #main .pic span:nth-of-type(25) {
+    top: 121px;
+    left: 470px;
+}
+.right .content ul li#switchMess #main .pic span:nth-of-type(26) {
+    top: 152px;
+    left: 470px;
+}
+.right .content ul li#switchMess #main .pic span:nth-of-type(27) {
+    top: 121px;
+    left: 507px;
+}
+.right .content ul li#switchMess #main .pic span:nth-of-type(28) {
+    top: 152px;
+    left: 507px;
+}
+.right .content ul li#switchMess #main .pic span:nth-of-type(29) {
+    top: 121px;
+    left: 544px;
+}
+.right .content ul li#switchMess #main .pic span:nth-of-type(30) {
+    top: 152px;
+    left: 544px;
+}
+.right .content ul li#switchMess #main .pic span:nth-of-type(31) {
+    top: 121px;
+    left: 581px;
+}
+.right .content ul li#switchMess #main .pic span:nth-of-type(32) {
+    top: 152px;
+    left: 581px;
+}
+.right .content ul li#switchMess #main .pic span:nth-of-type(33) {
+    top: 121px;
+    left: 618px;
+}
+.right .content ul li#switchMess #main .pic span:nth-of-type(34) {
+    top: 152px;
+    left: 618px;
+}
+.right .content ul li#switchMess #main .pic span:nth-of-type(35) {
+    top: 121px;
+    left: 655px;
+}
+.right .content ul li#switchMess #main .pic span:nth-of-type(36) {
+    top: 152px;
+    left: 655px;
+}
+.right .content ul li#switchMess #main .pic span:nth-of-type(37) {
+    top: 121px;
+    left: 692px;
+}
+.right .content ul li#switchMess #main .pic span:nth-of-type(38) {
+    top: 152px;
+    left: 692px;
+}
+.right .content ul li#switchMess #main .pic span:nth-of-type(39) {
+    top: 121px;
+    left: 730px;
+}
+.right .content ul li#switchMess #main .pic span:nth-of-type(40) {
+    top: 152px;
+    left: 730px;
+}
+.right .content ul li#switchMess #main .pic span:nth-of-type(41) {
+    top: 121px;
+    left: 765px;
+}
+.right .content ul li#switchMess #main .pic span:nth-of-type(42) {
+    top: 152px;
+    left: 765px;
+}
+.right .content ul li#switchMess #main .pic span:nth-of-type(43) {
+    top: 121px;
+    left: 803px;
+}
+.right .content ul li#switchMess #main .pic span:nth-of-type(44) {
+    top: 152px;
+    left: 803px;
+}
+.right .content ul li#switchMess #main .pic span:nth-of-type(45) {
+    top: 121px;
+    left: 840px;
+}
+.right .content ul li#switchMess #main .pic span:nth-of-type(46) {
+    top: 152px;
+    left: 840px;
+}
+.right .content ul li#switchMess #main .pic span:nth-of-type(47) {
+    top: 121px;
+    left: 877px;
+}
+.right .content ul li#switchMess #main .pic span:nth-of-type(48) {
+    top: 152px;
+    left: 877px;
+}
+.right .content ul li#switchMess #main .pic span:nth-of-type(49) {
+    width: 35px;
+    top: 121px;
+    left: 917px;
+}
+.right .content ul li#switchMess #main .pic span:nth-of-type(50) {
+    width: 35px;
+    top: 152px;
+    left: 917px;
+}
+.right .content ul li#switchMess #main .pic span:nth-of-type(51) {
+    width: 35px;
+    top: 121px;
+    left: 970px;
+}
+.right .content ul li#switchMess #main .pic span:nth-of-type(52) {
+    width: 35px;
+    top: 152px;
+    left: 970px;
+}
+.right .content ul li#switchMess .list {
+    margin-top: 10px;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: #fff;
+}
+.right .content ul li#switchMess .list .head {
+    width: 100%;
+    height: 66px;
+    line-height: 66px;
+    font-size: 18px;
+    font-weight: bold;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    /* Firefox */
+    padding-left: 30px;
+}
+.right .content ul li#switchMess .list .Bcontent {
+    width: 98%;
+    margin: 0 10px;
+    font-size: 14px;
+}
+.right .content ul li#switchMess .list .Bcontent .title {
+    background-color: #F7F7F7;
+    width: 100%;
+    height: 46px;
+    line-height: 46px;
+    font-size: 14px;
+}
+.right .content ul li#switchMess .list .Bcontent .title li {
+    width: 20%;
+    float: left;
+}
+.right .content ul li#switchMess .list .Bcontent ul {
+    width: 100%;
+    height: 100%;
+    padding: 0 26px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    font-size: 12px;
+}
+.right .content ul li#switchMess .list .Bcontent ul li {
+    width: 100%;
+    height: 46px;
+    float: left;
+    line-height: 46px;
+}
+.right .content ul li#switchMess .list .Bcontent ul li ul {
+    padding: 0;
+}
+.right .content ul li#switchMess .list .Bcontent ul li ul li {
+    width: 20%;
+}
+.right .content ul li#switchMess .list .Scontent {
+    width: 98%;
+    margin: 0 10px;
+    font-size: 14px;
+}
+.right .content ul li#switchMess .list .Scontent .title {
+    background-color: #F7F7F7;
+    width: 100%;
+    height: 46px;
+    line-height: 46px;
+    font-size: 14px;
+}
+.right .content ul li#switchMess .list .Scontent .title li {
+    width: 14.28%;
+    float: left;
+}
+.right .content ul li#switchMess .list .Scontent ul {
+    width: 100%;
+    height: 100%;
+    padding: 0 6px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    font-size: 12px;
+}
+.right .content ul li#switchMess .list .Scontent ul li {
+    width: 100%;
+    height: 46px;
+    float: left;
+    line-height: 46px;
+}
+.right .content ul li#switchMess .list .Scontent ul li.portName {
+    width: 17.5%;
+}
+.right .content ul li#switchMess .list .Scontent ul li.macAd {
+    width: 15%;
+}
+.right .content ul li#switchMess .list .Scontent ul li.receivePac {
+    width: 6%;
+}
+.right .content ul li#switchMess .list .Scontent ul li.ContractNum {
+    width: 6%;
+}
+.right .content ul li#switchMess .list .Scontent ul li.ofport {
+    width: 8%;
+}
+.right .content ul li#switchMess .list .Scontent ul li.speed {
+    width: 8%;
+}
+.right .content ul li#switchMess .list .Scontent ul li.mtu {
+    width: 6%;
+}
+.right .content ul li#switchMess .list .Scontent ul li.UUID {
+    width: 25%;
+}
+.right .content ul li#switchMess .list .Scontent ul li ul {
+    padding: 0;
+}
+.right .content ul li#switchMess .list#switchMess {
+    width: 100%;
+}
+.right .content ul li#switchMess .list#switchMess .software {
+    width: 100%;
+    height: 154px;
+    padding: 0 12px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    background-color: #fff;
+}
+.right .content ul li#switchMess .list#switchMess .software .title {
+    width: 100%;
+    height: 49px;
+    line-height: 49px;
+    font-size: 14px;
+}
+.right .content ul li#switchMess .list#switchMess .software .title span {
+    color: #4B98DC;
+    font-size: 22px;
+    display: block;
+    float: left;
+}
+.right .content ul li#switchMess .list#switchMess .software .nav {
+    width: 100%;
+    height: 46px;
+    line-height: 46px;
+    text-align: center;
+    background-color: #F7F7F7;
+}
+.right .content ul li#switchMess .list#switchMess .software .nav ul li {
+    float: left;
+    width: 25%;
+    height: 46px;
+}
+.right .content ul li#switchMess .list#switchMess .software .list {
+    width: 100%;
+    height: 59px;
+    line-height: 59px;
+    text-align: center;
+}
+.right .content ul li#switchMess .list#switchMess .software .list ul li {
+    float: left;
+    width: 25%;
+    height: 59px;
+}
+.right .content ul li#switchMess .list#switchMess .equipment {
+    margin-top: 10px;
+    height: 154px;
+    background-color: #fff;
+    padding: 0 12px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+.right .content ul li#switchMess .list#switchMess .equipment .title {
+    width: 100%;
+    height: 49px;
+    line-height: 49px;
+    font-size: 14px;
+}
+.right .content ul li#switchMess .list#switchMess .equipment .title span {
+    color: #3CD4EB;
+    font-size: 22px;
+    display: block;
+    float: left;
+}
+.right .content ul li#switchMess .list#switchMess .equipment .nav {
+    width: 100%;
+    height: 46px;
+    line-height: 46px;
+    text-align: center;
+    background-color: #F7F7F7;
+}
+.right .content ul li#switchMess .list#switchMess .equipment .nav ul li {
+    float: left;
+    width: 33.33%;
+    height: 46px;
+}
+.right .content ul li#switchMess .list#switchMess .equipment .list {
+    width: 100%;
+    height: 59px;
+    line-height: 59px;
+    text-align: center;
+}
+.right .content ul li#switchMess .list#switchMess .equipment .list ul li {
+    float: left;
+    width: 33.33%;
+    height: 59px;
+}
+.right .content ul li#switchMess .list#switchMess .cpu {
+    margin-top: 10px;
+    width: 100%;
+    height: 350px;
+    padding: 0 12px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    background-color: #fff;
+}
+.right .content ul li#switchMess .list#switchMess .cpu .title {
+    width: 100%;
+    height: 49px;
+    line-height: 49px;
+    font-size: 14px;
+}
+.right .content ul li#switchMess .list#switchMess .cpu .title span {
+    color: #4FC281;
+    font-size: 22px;
+    display: block;
+    float: left;
+}
+.right .content ul li#switchMess .list#switchMess .cpu #cpu {
+    width: 40%;
+    height: 300px;
+    float: left;
+}
+.right .content ul li#switchMess .list#switchMess .cpu .xinxi {
+    width: 60%;
+    height: 300px;
+    float: right;
+}
+.right .content ul li#switchMess .list#switchMess .cpu .xinxi .nav {
+    width: 100%;
+    height: 46px;
+    line-height: 46px;
+    text-align: center;
+    background-color: #F7F7F7;
+}
+.right .content ul li#switchMess .list#switchMess .cpu .xinxi .nav ul li {
+    float: left;
+    width: 20%;
+    height: 46px;
+}
+.right .content ul li#switchMess .list#switchMess .cpu .xinxi .list {
+    width: 100%;
+    height: 200px;
+    text-align: center;
+    position: relative;
+}
+.right .content ul li#switchMess .list#switchMess .cpu .xinxi .list .listCon {
+    width: 98%;
+    height: 200px;
+    overflow: hidden;
+    float: left;
+    position: relative;
+}
+.right .content ul li#switchMess .list#switchMess .cpu .xinxi .list .listCon div {
+    width: 688px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.right .content ul li#switchMess .list#switchMess .cpu .xinxi .list .listCon div ul {
+    width: 100%;
+    height: 100%;
+}
+.right .content ul li#switchMess .list#switchMess .cpu .xinxi .list .listCon div ul li {
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+}
+.right .content ul li#switchMess .list#switchMess .cpu .xinxi .list .listCon div ul li .item {
+    width: 100%;
+    height: 40px;
+}
+.right .content ul li#switchMess .list#switchMess .cpu .xinxi .list .listCon div ul li .item li {
+    float: left;
+    width: 20%;
+    height: 40px;
+}
+.right .content ul li#switchMess .list#switchMess .cpu .xinxi .list .listBar {
+    width: 2%;
+    height: 200px;
+    float: right;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.right .content ul li#switchMess .list#switchMess .cpu .xinxi .list .listBar .scrollBar {
+    width: 100%;
+    height: 100%;
+    background-color: #b4b4b4;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.right .content ul li#switchMess .list#switchMess .memory {
+    margin-top: 10px;
+    width: 100%;
+    height: 350px;
+    padding: 0 12px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    background-color: #fff;
+}
+.right .content ul li#switchMess .list#switchMess .memory .title {
+    width: 100%;
+    height: 49px;
+    line-height: 49px;
+    font-size: 14px;
+}
+.right .content ul li#switchMess .list#switchMess .memory .title span {
+    color: #6DBAF1;
+    font-size: 22px;
+    display: block;
+    float: left;
+}
+.right .content ul li#switchMess .list#switchMess .memory #memory {
+    width: 40%;
+    height: 300px;
+    float: left;
+}
+.right .content ul li#switchMess .list#switchMess .memory .xinxi {
+    width: 60%;
+    height: 300px;
+    float: right;
+}
+.right .content ul li#switchMess .list#switchMess .memory .xinxi .nav {
+    width: 100%;
+    height: 46px;
+    line-height: 46px;
+    text-align: center;
+    background-color: #F7F7F7;
+}
+.right .content ul li#switchMess .list#switchMess .memory .xinxi .nav ul li {
+    float: left;
+    width: 33.33%;
+    height: 46px;
+}
+.right .content ul li#switchMess .list#switchMess .memory .xinxi .list {
+    width: 100%;
+    height: 59px;
+    line-height: 59px;
+    text-align: center;
+}
+.right .content ul li#switchMess .list#switchMess .memory .xinxi .list ul li {
+    float: left;
+    width: 33.33%;
+    height: 59px;
+}
+.right .content ul li#switchMess .list#switchMess .fan {
+    width: 100%;
+    height: 310px;
+    padding: 0 12px;
+    margin-top: 10px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    background-color: #fff;
+}
+.right .content ul li#switchMess .list#switchMess .fan .title {
+    width: 100%;
+    height: 49px;
+    line-height: 49px;
+    font-size: 14px;
+}
+.right .content ul li#switchMess .list#switchMess .fan .title span {
+    color: #32DEC4;
+    font-size: 22px;
+    display: block;
+    float: left;
+}
+.right .content ul li#switchMess .list#switchMess .fan .pic {
+    width: 100%;
+    height: 240px;
+    float: right;
+    padding-left: 30px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+.right .content ul li#switchMess .list#switchMess .fan .pic ul {
+    width: 100%;
+}
+.right .content ul li#switchMess .list#switchMess .fan .pic ul li {
+    float: left;
+    height: 240px;
+    width: 14.2%;
+}
+.right .content ul li#switchMess .list#switchMess .fan .pic ul li .fanTitle {
+    width: 100%;
+    height: 150px;
+    margin-top: 91px;
+}
+.right .content ul li#switchMess .list#switchMess .fan .pic ul li .fanTitle li {
+    width: 100%;
+    height: 35px;
+    line-height: 35px;
+    float: none;
+    text-align: center;
+}
+.right .content ul li#switchMess .list#switchMess .fan .pic ul li .fanmess {
+    width: 100%;
+    height: 150px;
+    margin-top: 30px;
+}
+.right .content ul li#switchMess .list#switchMess .fan .pic ul li .fanmess li {
+    width: 100%;
+    height: 35px;
+    line-height: 35px;
+    float: none;
+}
+.right .content ul li#switchMess .list#switchMess .fan .xinxi {
+    width: 100%;
+    height: 140px;
+}
+.right .content ul li#switchMess .list#switchMess .fan .xinxi ul li {
+    float: left;
+}
+.right .content ul li#switchMess .list#switchMess .temperature {
+    width: 100%;
+    height: 350px;
+    padding: 0 12px;
+    margin-top: 10px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    background-color: #fff;
+}
+.right .content ul li#switchMess .list#switchMess .temperature .title {
+    width: 100%;
+    height: 49px;
+    line-height: 49px;
+    font-size: 14px;
+}
+.right .content ul li#switchMess .list#switchMess .temperature .title span {
+    color: #FAC933;
+    font-size: 22px;
+    display: block;
+    float: left;
+}
+.right .content ul li#switchMess .list#switchMess .temperature .temLeft,
+.right .content ul li#switchMess .list#switchMess .temperature .temRight {
+    width: 50%;
+    height: 290px;
+    float: left;
+    text-align: center;
+}
+.right .content ul li#switchMess .list#switchMess .temperature .temLeft ul,
+.right .content ul li#switchMess .list#switchMess .temperature .temRight ul {
+    width: 200px;
+    height: 100px;
+    margin: 20px auto 0;
+}
+.right .content ul li#switchMess .list#switchMess .temperature .temLeft ul li,
+.right .content ul li#switchMess .list#switchMess .temperature .temRight ul li {
+    height: 33px;
+    line-height: 33px;
+}
+.right .content ul li#switchMess .list#switchMess .temperature .temLeft ul li span:nth-of-type(1),
+.right .content ul li#switchMess .list#switchMess .temperature .temRight ul li span:nth-of-type(1) {
+    display: block;
+    width: 80px;
+    float: left;
+}
+.right .content ul li#switchMess .list#switchMess .temperature .temLeft ul li span:nth-of-type(2),
+.right .content ul li#switchMess .list#switchMess .temperature .temRight ul li span:nth-of-type(2) {
+    display: block;
+    width: 120px;
+    text-align: center;
+    float: right;
+}
+.right .content ul li#switchMess .list#switchMess .temperature .temLeft {
+    padding-top: 40px;
+}
+.right .content ul li#switchMess .list#switchMess .power {
+    width: 100%;
+    height: 350px;
+    padding: 0 12px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    margin: 10px 0;
+    background-color: #fff;
+}
+.right .content ul li#switchMess .list#switchMess .power .title {
+    width: 100%;
+    height: 49px;
+    line-height: 49px;
+    font-size: 14px;
+    position: relative;
+    text-align: left;
+}
+.right .content ul li#switchMess .list#switchMess .power .title span:nth-of-type(1) {
+    color: #F5493C;
+    font-size: 22px;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.right .content ul li#switchMess .list#switchMess .power .title span:nth-of-type(2) {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 35px;
+}
+.right .content ul li#switchMess .list#switchMess .power .powerLeft,
+.right .content ul li#switchMess .list#switchMess .power .powerRight {
+    width: 50%;
+    height: 290px;
+    float: left;
+    text-align: center;
+    padding-top: 40px;
+}
+.right .content ul li#switchMess .list#switchMess .power .powerLeft ul,
+.right .content ul li#switchMess .list#switchMess .power .powerRight ul {
+    width: 200px;
+    height: 100px;
+    margin: 20px auto 0;
+}
+.right .content ul li#switchMess .list#switchMess .power .powerLeft ul li,
+.right .content ul li#switchMess .list#switchMess .power .powerRight ul li {
+    height: 33px;
+    line-height: 33px;
+    float: left;
+}
+.right .content ul li#switchMess .list#switchMess .power .powerLeft ul li span:nth-of-type(1),
+.right .content ul li#switchMess .list#switchMess .power .powerRight ul li span:nth-of-type(1) {
+    display: block;
+    width: 80px;
+    float: left;
+}
+.right .content ul li#switchMess .list#switchMess .power .powerLeft ul li span:nth-of-type(2),
+.right .content ul li#switchMess .list#switchMess .power .powerRight ul li span:nth-of-type(2) {
+    display: block;
+    width: 120px;
+    text-align: center;
+    float: right;
+}
+.right .content ul li#switchMess .list#controlMess {
+    display: none;
+    background-color: #fff;
+    width: 100%;
+    height: 100%;
+    padding: 0 12px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+.right .content ul li#switchMess .list#controlMess .portPic {
+    width: 100%;
+    height: 230px;
+}
+.right .content ul li#switchMess .list#controlMess .portPic .title {
+    font-size: 14px;
+    height: 50px;
+    line-height: 50px;
+}
+.right .content ul li#switchMess .list#controlMess .portPic .pict {
+    width: 1100px;
+    height: 120px;
+    background: url("../images/switch.png") no-repeat center;
+    position: relative;
+    margin: 0 auto;
+}
+.right .content ul li#switchMess .list#controlMess .portPic .pict span {
+    width: 10px;
+    height: 4px;
+    position: absolute;
+}
+.right .content ul li#switchMess .list#controlMess .portPic .pict span:nth-of-type(1) {
+    top: 12px;
+    left: 32px;
+}
+.right .content ul li#switchMess .list#controlMess .portPic .pict span:nth-of-type(2) {
+    top: 85px;
+    left: 32px;
+}
+.right .content ul li#switchMess .list#controlMess .portPic .pict span:nth-of-type(3) {
+    top: 12px;
+    left: 68px;
+}
+.right .content ul li#switchMess .list#controlMess .portPic .pict span:nth-of-type(4) {
+    top: 85px;
+    left: 68px;
+}
+.right .content ul li#switchMess .list#controlMess .portPic .pict span:nth-of-type(5) {
+    top: 12px;
+    left: 105px;
+}
+.right .content ul li#switchMess .list#controlMess .portPic .pict span:nth-of-type(6) {
+    top: 85px;
+    left: 105px;
+}
+.right .content ul li#switchMess .list#controlMess .portPic .pict span:nth-of-type(7) {
+    top: 12px;
+    left: 142px;
+}
+.right .content ul li#switchMess .list#controlMess .portPic .pict span:nth-of-type(8) {
+    top: 85px;
+    left: 142px;
+}
+.right .content ul li#switchMess .list#controlMess .portPic .pict span:nth-of-type(9) {
+    top: 12px;
+    left: 178px;
+}
+.right .content ul li#switchMess .list#controlMess .portPic .pict span:nth-of-type(10) {
+    top: 85px;
+    left: 178px;
+}
+.right .content ul li#switchMess .list#controlMess .portPic .pict span:nth-of-type(11) {
+    top: 12px;
+    left: 215px;
+}
+.right .content ul li#switchMess .list#controlMess .portPic .pict span:nth-of-type(12) {
+    top: 85px;
+    left: 215px;
+}
+.right .content ul li#switchMess .list#controlMess .portPic .pict span:nth-of-type(13) {
+    top: 12px;
+    left: 252px;
+}
+.right .content ul li#switchMess .list#controlMess .portPic .pict span:nth-of-type(14) {
+    top: 85px;
+    left: 252px;
+}
+.right .content ul li#switchMess .list#controlMess .portPic .pict span:nth-of-type(15) {
+    top: 12px;
+    left: 288px;
+}
+.right .content ul li#switchMess .list#controlMess .portPic .pict span:nth-of-type(16) {
+    top: 85px;
+    left: 288px;
+}
+.right .content ul li#switchMess .list#controlMess .portPic .pict span:nth-of-type(17) {
+    top: 12px;
+    left: 351px;
+}
+.right .content ul li#switchMess .list#controlMess .portPic .pict span:nth-of-type(18) {
+    top: 85px;
+    left: 351px;
+}
+.right .content ul li#switchMess .list#controlMess .portPic .pict span:nth-of-type(19) {
+    top: 12px;
+    left: 388px;
+}
+.right .content ul li#switchMess .list#controlMess .portPic .pict span:nth-of-type(20) {
+    top: 85px;
+    left: 388px;
+}
+.right .content ul li#switchMess .list#controlMess .portPic .pict span:nth-of-type(21) {
+    top: 12px;
+    left: 425px;
+}
+.right .content ul li#switchMess .list#controlMess .portPic .pict span:nth-of-type(22) {
+    top: 85px;
+    left: 425px;
+}
+.right .content ul li#switchMess .list#controlMess .portPic .pict span:nth-of-type(23) {
+    top: 12px;
+    left: 462px;
+}
+.right .content ul li#switchMess .list#controlMess .portPic .pict span:nth-of-type(24) {
+    top: 85px;
+    left: 462px;
+}
+.right .content ul li#switchMess .list#controlMess .portPic .pict span:nth-of-type(25) {
+    top: 12px;
+    left: 498px;
+}
+.right .content ul li#switchMess .list#controlMess .portPic .pict span:nth-of-type(26) {
+    top: 85px;
+    left: 498px;
+}
+.right .content ul li#switchMess .list#controlMess .portPic .pict span:nth-of-type(27) {
+    top: 12px;
+    left: 535px;
+}
+.right .content ul li#switchMess .list#controlMess .portPic .pict span:nth-of-type(28) {
+    top: 85px;
+    left: 535px;
+}
+.right .content ul li#switchMess .list#controlMess .portPic .pict span:nth-of-type(29) {
+    top: 12px;
+    left: 572px;
+}
+.right .content ul li#switchMess .list#controlMess .portPic .pict span:nth-of-type(30) {
+    top: 85px;
+    left: 572px;
+}
+.right .content ul li#switchMess .list#controlMess .portPic .pict span:nth-of-type(31) {
+    top: 12px;
+    left: 608px;
+}
+.right .content ul li#switchMess .list#controlMess .portPic .pict span:nth-of-type(32) {
+    top: 85px;
+    left: 608px;
+}
+.right .content ul li#switchMess .list#controlMess .portPic .pict span:nth-of-type(33) {
+    top: 12px;
+    left: 672px;
+}
+.right .content ul li#switchMess .list#controlMess .portPic .pict span:nth-of-type(34) {
+    top: 85px;
+    left: 672px;
+}
+.right .content ul li#switchMess .list#controlMess .portPic .pict span:nth-of-type(35) {
+    top: 12px;
+    left: 710px;
+}
+.right .content ul li#switchMess .list#controlMess .portPic .pict span:nth-of-type(36) {
+    top: 85px;
+    left: 710px;
+}
+.right .content ul li#switchMess .list#controlMess .portPic .pict span:nth-of-type(37) {
+    top: 12px;
+    left: 747px;
+}
+.right .content ul li#switchMess .list#controlMess .portPic .pict span:nth-of-type(38) {
+    top: 85px;
+    left: 747px;
+}
+.right .content ul li#switchMess .list#controlMess .portPic .pict span:nth-of-type(39) {
+    top: 12px;
+    left: 784px;
+}
+.right .content ul li#switchMess .list#controlMess .portPic .pict span:nth-of-type(40) {
+    top: 85px;
+    left: 784px;
+}
+.right .content ul li#switchMess .list#controlMess .portPic .pict span:nth-of-type(41) {
+    top: 12px;
+    left: 820px;
+}
+.right .content ul li#switchMess .list#controlMess .portPic .pict span:nth-of-type(42) {
+    top: 85px;
+    left: 820px;
+}
+.right .content ul li#switchMess .list#controlMess .portPic .pict span:nth-of-type(43) {
+    top: 12px;
+    left: 856px;
+}
+.right .content ul li#switchMess .list#controlMess .portPic .pict span:nth-of-type(44) {
+    top: 85px;
+    left: 856px;
+}
+.right .content ul li#switchMess .list#controlMess .portPic .pict span:nth-of-type(45) {
+    top: 12px;
+    left: 893px;
+}
+.right .content ul li#switchMess .list#controlMess .portPic .pict span:nth-of-type(46) {
+    top: 85px;
+    left: 893px;
+}
+.right .content ul li#switchMess .list#controlMess .portPic .pict span:nth-of-type(47) {
+    top: 12px;
+    left: 930px;
+}
+.right .content ul li#switchMess .list#controlMess .portPic .pict span:nth-of-type(48) {
+    top: 85px;
+    left: 930px;
+}
+.right .content ul li#switchMess .list#controlMess .portPic .pict span:nth-of-type(49) {
+    top: 12px;
+    left: 997px;
+}
+.right .content ul li#switchMess .list#controlMess .portPic .pict span:nth-of-type(50) {
+    top: 85px;
+    left: 997px;
+}
+.right .content ul li#switchMess .list#controlMess .portPic .pict span:nth-of-type(51) {
+    top: 12px;
+    left: 1048px;
+}
+.right .content ul li#switchMess .list#controlMess .portPic .pict span:nth-of-type(52) {
+    top: 85px;
+    left: 1048px;
+}
+.right .content ul li#switchMess .list#controlMess .portPic .portMess {
+    width: 100%;
+    height: 58px;
+    line-height: 58px;
+}
+.right .content ul li#switchMess .list#controlMess .portPic .portMess span:nth-of-type(1) {
+    font-size: 16px;
+}
+.right .content ul li#switchMess .list#controlMess .portPic .portMess .clear {
+    float: right;
+}
+.right .content ul li#switchMess .list#controlMess .portPic .portMess .clear button {
+    width: 58px;
+    height: 28px;
+    border-radius: 3px;
+    background-color: #4B97DB;
+    margin-left: 5px;
+    margin-top: 15px;
+    color: #fff;
+    float: right;
+    cursor: pointer;
+}
+.right .content ul li#switchMess .list#controlMess .portList .title {
+    height: 46px;
+    line-height: 46px;
+    background-color: #F7F7F7;
+    font-weight: bold;
+}
+.right .content ul li#switchMess .list#controlMess .portList .title ul li {
+    float: left;
+    text-align: center;
+}
+.right .content ul li#switchMess .list#controlMess .portList .portNumber {
+    width: 10%;
+}
+.right .content ul li#switchMess .list#controlMess .portList .portEquipment {
+    width: 10%;
+}
+.right .content ul li#switchMess .list#controlMess .portList .portSpeed {
+    width: 15%;
+}
+.right .content ul li#switchMess .list#controlMess .portList .portState {
+    width: 15%;
+}
+.right .content ul li#switchMess .list#controlMess .portList .utilization {
+    width: 10%;
+}
+.right .content ul li#switchMess .list#controlMess .portList .ReceivePackets {
+    width: 10%;
+}
+.right .content ul li#switchMess .list#controlMess .portList .RpacketLoss {
+    width: 10%;
+}
+.right .content ul li#switchMess .list#controlMess .portList .SendPackets {
+    width: 10%;
+}
+.right .content ul li#switchMess .list#controlMess .portList .SpacketLoss {
+    width: 10%;
+}
+.right .content ul li#switchMess .list#controlMess .portList .list ul li ul {
+    height: 45px;
+    line-height: 45px;
+}
+.right .content ul li#switchMess .list#controlMess .portList .list ul li ul li {
+    float: left;
+    text-align: center;
+}
+.right .content ul li#switchMess .list#controlMess .portList .list ul li ul li span {
+    color: #FF0D0D;
+}
+.right .content ul li#switchMess .list#faultLocation {
+    display: none;
+}
+.right .content ul li#switchMess .list#faultLocation ul {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.right .content ul li#switchMess .list#faultLocation ul li {
+    width: 100%;
+    height: 100%;
+}
+.right .content ul li#switchMess .list#faultLocation ul li#MAC {
+    background-color: #fff;
+    width: 100%;
+    height: 100%;
+    padding: 0 12px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+.right .content ul li#switchMess .list#faultLocation ul li#MAC .MacTitle {
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    font-size: 14px;
+}
+.right .content ul li#switchMess .list#faultLocation ul li#MAC .MacList {
+    width: 100%;
+    height: 100%;
+}
+.right .content ul li#switchMess .list#faultLocation ul li#MAC .MacList .title {
+    height: 46px;
+    line-height: 46px;
+    text-align: center;
+    font-weight: bold;
+    background-color: #F7F7F7;
+}
+.right .content ul li#switchMess .list#faultLocation ul li#MAC .MacList .title ul li {
+    float: left;
+}
+.right .content ul li#switchMess .list#faultLocation ul li#MAC .MacList .Vlan {
+    width: 25%;
+}
+.right .content ul li#switchMess .list#faultLocation ul li#MAC .MacList .Address {
+    width: 25%;
+}
+.right .content ul li#switchMess .list#faultLocation ul li#MAC .MacList .Interface {
+    width: 25%;
+}
+.right .content ul li#switchMess .list#faultLocation ul li#MAC .MacList .Status {
+    width: 25%;
+}
+.right .content ul li#switchMess .list#faultLocation ul li#MAC .MacList .list ul li ul {
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+}
+.right .content ul li#switchMess .list#faultLocation ul li#MAC .MacList .list ul li ul li {
+    float: left;
+}
+.right .content ul li#switchMess .list#faultLocation ul li#STP {
+    display: none;
+    background-color: #fff;
+    width: 100%;
+    height: 100%;
+    padding: 0 12px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+.right .content ul li#switchMess .list#faultLocation ul li#STP .STPTitle {
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    font-size: 14px;
+}
+.right .content ul li#switchMess .list#faultLocation ul li#STP .STPList {
+    width: 100%;
+    height: 100%;
+}
+.right .content ul li#switchMess .list#faultLocation ul li#STP .STPList .title {
+    height: 46px;
+    line-height: 46px;
+    text-align: center;
+    font-weight: bold;
+    background-color: #F7F7F7;
+}
+.right .content ul li#switchMess .list#faultLocation ul li#STP .STPList .title ul li {
+    width: 25%;
+    float: left;
+}
+.right .content ul li#switchMess .list#faultLocation ul li#STP .STPList .portNumber1 {
+    width: 25%;
+}
+.right .content ul li#switchMess .list#faultLocation ul li#STP .STPList .cost {
+    width: 25%;
+}
+.right .content ul li#switchMess .list#faultLocation ul li#STP .STPList .Priority {
+    width: 25%;
+}
+.right .content ul li#switchMess .list#faultLocation ul li#STP .STPList .State {
+    width: 25%;
+}
+.right .content ul li#switchMess .list#faultLocation ul li#STP .STPList .list ul li ul {
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+}
+.right .content ul li#switchMess .list#faultLocation ul li#STP .STPList .list ul li ul li {
+    float: left;
+}
+.right .content ul li#switchMess .list#faultLocation ul li#vCP {
+    display: none;
+    background-color: #fff;
+    width: 100%;
+    height: 100%;
+    padding: 0 12px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+.right .content ul li#switchMess .list#faultLocation ul li#vCP .vCPTitle {
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    font-size: 14px;
+}
+.right .content ul li#switchMess .list#faultLocation ul li#vCP .vCPList {
+    width: 100%;
+    height: 100%;
+}
+.right .content ul li#switchMess .list#faultLocation ul li#vCP .vCPList .title {
+    width: 100%;
+    height: 100%;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    font-weight: bold;
+    background-color: #F7F7F7;
+}
+.right .content ul li#switchMess .list#faultLocation ul li#vCP .vCPList .title ul {
+    width: 100%;
+}
+.right .content ul li#switchMess .list#faultLocation ul li#vCP .vCPList .title ul li {
+    text-align: left;
+    padding-left: 38px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    float: left;
+}
+.right .content ul li#switchMess .list#faultLocation ul li#vCP .vCPList .list ul li ul {
+    height: 70px;
+    line-height: 70px;
+    text-align: center;
+}
+.right .content ul li#switchMess .list#faultLocation ul li#vCP .vCPList .list ul li ul li {
+    padding-left: 38px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    float: left;
+}
+.right .content ul li#switchMess .list#faultLocation ul li#vCP .vCPList .brief {
+    width: 100%;
+    height: 100%;
+}
+.right .content ul li#switchMess .list#faultLocation ul li#vCP .vCPList .brief .title ul li {
+    width: 50%;
+}
+.right .content ul li#switchMess .list#faultLocation ul li#vCP .vCPList .brief .title ul li:nth-of-type(1) {
+    background-color: #99CBFF;
+}
+.right .content ul li#switchMess .list#faultLocation ul li#vCP .vCPList .brief .title ul li:nth-of-type(2) {
+    background-color: #FF9999;
+}
+.right .content ul li#switchMess .list#faultLocation ul li#vCP .vCPList .brief ul li ul {
+    height: 70px;
+    line-height: 70px;
+    text-align: left;
+}
+.right .content ul li#switchMess .list#faultLocation ul li#vCP .vCPList .brief ul li ul li {
+    width: 50%;
+    float: left;
+}
+.right .content ul li#switchMess .list#faultLocation ul li#vCP .vCPList .peer {
+    width: 100%;
+    height: 100%;
+}
+.right .content ul li#switchMess .list#faultLocation ul li#vCP .vCPList .peer .title {
+    width: 364px;
+    height: 60px;
+    margin: 0 auto;
+}
+.right .content ul li#switchMess .list#faultLocation ul li#vCP .vCPList .peer ul li ul {
+    height: 70px;
+    line-height: 70px;
+    text-align: left;
+}
+.right .content ul li#switchMess .list#faultLocation ul li#vCP .vCPList .peer ul li ul li {
+    padding-left: 38px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    width: 50%;
+    float: left;
+}
+.right .content ul li#switchMess .list#faultLocation ul li#vCP .vCPList .statistics {
+    width: 100%;
+    height: 100%;
+}
+.right .content ul li#switchMess .list#faultLocation ul li#vCP .vCPList .statistics .title {
+    width: 364px;
+    height: 60px;
+    margin: 0 auto;
+}
+.right .content ul li#switchMess .list#faultLocation ul li#vCP .vCPList .statistics ul li ul {
+    height: 70px;
+    line-height: 70px;
+    text-align: left;
+}
+.right .content ul li#switchMess .list#faultLocation ul li#vCP .vCPList .statistics ul li ul li {
+    width: 50%;
+    float: left;
+}
+.right .content ul li#switchMess .list#faultLocation ul li#vCP .vCPList .listAll {
+    width: 100%;
+    height: 100%;
+}
+.right .content ul li#switchMess .list#faultLocation ul li#vCP .vCPList .listAll .title ul li {
+    padding-left: 0;
+}
+.right .content ul li#switchMess .list#faultLocation ul li#vCP .vCPList .listAll .title ul li ul li {
+    padding-left: 38px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+.right .content ul li#switchMess .list#faultLocation ul li#vCP .vCPList .listAll ul li ul {
+    height: 70px;
+    line-height: 70px;
+    text-align: left;
+}
+.right .content ul li#switchMess .list#faultLocation ul li#vCP .vCPList .listAll ul li ul li {
+    width: 20%;
+    float: left;
+}
+.right .content ul li#controlMess {
+    font-family: "icons", "Microsoft Yahei";
+}
+.right .content ul li#controlMess .control_title {
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    font-size: 18px;
+    font-weight: bold;
+}
+.right .content ul li#controlMess #canvas {
+    width: 100%;
+    height: 264px;
+    position: relative;
+}
+.right .content ul li#controlMess #canvas .twoStyle {
+    width: 264px;
+    height: 264px;
+    margin: 0 auto;
+    position: relative;
+}
+.right .content ul li#controlMess #canvas .twoStyle .circle {
+    width: 264px;
+    height: 264px;
+    border-radius: 132px;
+    border: 1px dashed #000;
+    text-align: center;
+}
+.right .content ul li#controlMess #canvas .twoStyle .show {
+    width: 264px;
+    height: 264px;
+    margin-left: -132px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+}
+.right .content ul li#controlMess #canvas .twoStyle .show:nth-of-type(2) img {
+    position: absolute;
+    cursor: pointer;
+    top: 60px;
+    left: -40px;
+    /* &:nth-of-type(1) {
+                        top: 60px;
+                        left: -40px;
+                      }
+                      &:nth-of-type(2) {
+                        top: 60px;
+                        left: 200px;
+                      }*/
+}
+.right .content ul li#controlMess #canvas .twoStyle .show:nth-of-type(2) .float {
+    width: 200px;
+    padding: 20px;
+    position: absolute;
+    background-color: #848484;
+    border-radius: 5px;
+    color: #fff;
+    top: 80px;
+    left: -300px;
+    /* &:nth-of-type(1) {
+                        top: 80px;
+                        left: -300px;
+                      }
+                      &:nth-of-type(2) {
+                        top: 80px;
+                        left: 320px;
+                      }*/
+}
+.right .content ul li#controlMess #canvas .twoStyle .show:nth-of-type(3) img {
+    position: absolute;
+    cursor: pointer;
+    top: 60px;
+    left: 200px;
+    /* &:nth-of-type(1) {
+                         top: 60px;
+                         left: -40px;
+                       }
+                       &:nth-of-type(2) {
+                         top: 60px;
+                         left: 200px;
+                       }*/
+}
+.right .content ul li#controlMess #canvas .twoStyle .show:nth-of-type(3) .float {
+    width: 200px;
+    padding: 20px;
+    position: absolute;
+    background-color: #848484;
+    border-radius: 5px;
+    color: #fff;
+    top: 80px;
+    left: 320px;
+    /* &:nth-of-type(1) {
+                         top: 80px;
+                         left: -300px;
+                       }
+                       &:nth-of-type(2) {
+                         top: 80px;
+                         left: 320px;
+                       }*/
+}
+.right .content ul li#controlMess #canvas .twoStyle .vip {
+    position: absolute;
+    top: 120px;
+    left: 80px;
+    width: 60px;
+    height: 20px;
+    line-height: 20px;
+}
+.right .content ul li#controlMess #canvas .threeStyle {
+    width: 264px;
+    height: 264px;
+    margin: 0 auto;
+    position: relative;
+}
+.right .content ul li#controlMess #canvas .threeStyle .circle {
+    width: 264px;
+    height: 264px;
+    border-radius: 132px;
+    border: 1px dashed #000;
+    text-align: center;
+}
+.right .content ul li#controlMess #canvas .threeStyle .show {
+    width: 264px;
+    height: 264px;
+    margin-left: -132px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+}
+.right .content ul li#controlMess #canvas .threeStyle .show:nth-of-type(2) img {
+    position: absolute;
+    cursor: pointer;
+    top: -60px;
+    left: 80px;
+    /* &:nth-of-type(1){
+                         top:-60px;
+                         left: 80px;
+                       }
+                       &:nth-of-type(2){
+                         bottom: -40px;
+                         left:-30px;
+                       }
+                       &:nth-of-type(3){
+                         bottom:-40px;
+                         right: -30px;
+                       }*/
+}
+.right .content ul li#controlMess #canvas .threeStyle .show:nth-of-type(2) .float {
+    width: 200px;
+    padding: 20px;
+    position: absolute;
+    background-color: #848484;
+    border-radius: 5px;
+    color: #fff;
+    top: -40px;
+    left: 200px;
+    /* &:nth-of-type(1){
+                         top:-40px;
+                         left:200px;
+                       }
+                       &:nth-of-type(2){
+                         top:160px;
+                         left:-280px;
+                       }
+                       &:nth-of-type(3){
+                         top:160px;
+                         left:300px;*/
+}
+.right .content ul li#controlMess #canvas .threeStyle .show:nth-of-type(3) img {
+    position: absolute;
+    cursor: pointer;
+    bottom: -40px;
+    left: -30px;
+    /* &:nth-of-type(1){
+                         top:-60px;
+                         left: 80px;
+                       }
+                       &:nth-of-type(2){
+                         bottom: -40px;
+                         left:-30px;
+                       }
+                       &:nth-of-type(3){
+                         bottom:-40px;
+                         right: -30px;
+                       }*/
+}
+.right .content ul li#controlMess #canvas .threeStyle .show:nth-of-type(3) .float {
+    width: 200px;
+    padding: 20px;
+    position: absolute;
+    background-color: #848484;
+    border-radius: 5px;
+    color: #fff;
+    top: 160px;
+    left: -280px;
+    /* &:nth-of-type(1){
+                         top:-40px;
+                         left:200px;
+                       }
+                       &:nth-of-type(2){
+                         top:160px;
+                         left:-280px;
+                       }
+                       &:nth-of-type(3){
+                         top:160px;
+                         left:300px;*/
+}
+.right .content ul li#controlMess #canvas .threeStyle .show:nth-of-type(4) img {
+    position: absolute;
+    cursor: pointer;
+    bottom: -40px;
+    right: -30px;
+    /* &:nth-of-type(1){
+                         top:-60px;
+                         left: 80px;
+                       }
+                       &:nth-of-type(2){
+                         bottom: -40px;
+                         left:-30px;
+                       }
+                       &:nth-of-type(3){
+                         bottom:-40px;
+                         right: -30px;
+                       }*/
+}
+.right .content ul li#controlMess #canvas .threeStyle .show:nth-of-type(4) .float {
+    width: 200px;
+    padding: 20px;
+    position: absolute;
+    background-color: #848484;
+    border-radius: 5px;
+    color: #fff;
+    top: 160px;
+    left: 300px;
+    /* &:nth-of-type(1){
+                         top:-40px;
+                         left:200px;
+                       }
+                       &:nth-of-type(2){
+                         top:160px;
+                         left:-280px;
+                       }
+                       &:nth-of-type(3){
+                         top:160px;
+                         left:300px;*/
+}
+.right .content ul li#controlMess #canvas .threeStyle .vip {
+    position: absolute;
+    top: 120px;
+    left: 80px;
+    width: 60px;
+    height: 20px;
+    line-height: 20px;
+}
+.right .content ul li#controlMess #canvas .fiveStyle {
+    width: 264px;
+    height: 264px;
+    margin: 0 auto;
+}
+.right .content ul li#controlMess #canvas .fiveStyle .circle {
+    width: 264px;
+    height: 264px;
+    border-radius: 132px;
+    border: 1px dashed #000;
+    text-align: center;
+}
+.right .content ul li#controlMess #canvas .fiveStyle .show {
+    width: 264px;
+    height: 264px;
+    margin-left: -132px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+}
+.right .content ul li#controlMess #canvas .fiveStyle .show:nth-of-type(2) img {
+    position: absolute;
+    cursor: pointer;
+    width: 80px;
+    height: 120px;
+    top: -60px;
+    left: 80px;
+    /*  &:nth-of-type(1){
+                          top:-60px;
+                          left: 80px;
+                        }
+                        &:nth-of-type(2){
+                          top: 20px;
+                          left:-40px;
+                        }
+                        &:nth-of-type(3){
+                          top:20px;
+                          right: -40px;
+                        }
+                        &:nth-of-type(4){
+                          bottom:-40px;
+                          left: -20px;
+                        }
+                        &:nth-of-type(5){
+                          bottom:-40px;
+                          right: -20px;
+                        }*/
+}
+.right .content ul li#controlMess #canvas .fiveStyle .show:nth-of-type(2) .float {
+    width: 200px;
+    padding: 10px;
+    position: absolute;
+    text-align: left;
+    background-color: #848484;
+    border-radius: 5px;
+    color: #fff;
+    top: -50px;
+    left: 180px;
+    /*&:nth-of-type(1){
+                        top:-50px;
+                        left:180px;
+                      }
+                      &:nth-of-type(2){
+                        top:30px;
+                        left:-280px;
+                      }
+                      &:nth-of-type(3){
+                        top:30px;
+                        right:-280px;
+                      }
+                      &:nth-of-type(4){
+                        top:190px;
+                        left:-260px;
+                      }
+                      &:nth-of-type(5){
+                        top:190px;
+                        right:-260px;
+                      }*/
+}
+.right .content ul li#controlMess #canvas .fiveStyle .show:nth-of-type(3) img {
+    position: absolute;
+    cursor: pointer;
+    width: 80px;
+    height: 120px;
+    top: 20px;
+    left: -40px;
+    /*  &:nth-of-type(1){
+                          top:-60px;
+                          left: 80px;
+                        }
+                        &:nth-of-type(2){
+                          top: 20px;
+                          left:-40px;
+                        }
+                        &:nth-of-type(3){
+                          top:20px;
+                          right: -40px;
+                        }
+                        &:nth-of-type(4){
+                          bottom:-40px;
+                          left: -20px;
+                        }
+                        &:nth-of-type(5){
+                          bottom:-40px;
+                          right: -20px;
+                        }*/
+}
+.right .content ul li#controlMess #canvas .fiveStyle .show:nth-of-type(3) .float {
+    width: 200px;
+    padding: 10px;
+    position: absolute;
+    text-align: left;
+    background-color: #848484;
+    border-radius: 5px;
+    color: #fff;
+    top: 30px;
+    left: -280px;
+    /*&:nth-of-type(1){
+                        top:-50px;
+                        left:180px;
+                      }
+                      &:nth-of-type(2){
+                        top:30px;
+                        left:-280px;
+                      }
+                      &:nth-of-type(3){
+                        top:30px;
+                        right:-280px;
+                      }
+                      &:nth-of-type(4){
+                        top:190px;
+                        left:-260px;
+                      }
+                      &:nth-of-type(5){
+                        top:190px;
+                        right:-260px;
+                      }*/
+}
+.right .content ul li#controlMess #canvas .fiveStyle .show:nth-of-type(4) img {
+    position: absolute;
+    cursor: pointer;
+    width: 80px;
+    height: 120px;
+    top: 20px;
+    right: -40px;
+    /*  &:nth-of-type(1){
+                          top:-60px;
+                          left: 80px;
+                        }
+                        &:nth-of-type(2){
+                          top: 20px;
+                          left:-40px;
+                        }
+                        &:nth-of-type(3){
+                          top:20px;
+                          right: -40px;
+                        }
+                        &:nth-of-type(4){
+                          bottom:-40px;
+                          left: -20px;
+                        }
+                        &:nth-of-type(5){
+                          bottom:-40px;
+                          right: -20px;
+                        }*/
+}
+.right .content ul li#controlMess #canvas .fiveStyle .show:nth-of-type(4) .float {
+    width: 200px;
+    padding: 10px;
+    position: absolute;
+    text-align: left;
+    background-color: #848484;
+    border-radius: 5px;
+    color: #fff;
+    top: 30px;
+    right: -280px;
+    /*&:nth-of-type(1){
+                        top:-50px;
+                        left:180px;
+                      }
+                      &:nth-of-type(2){
+                        top:30px;
+                        left:-280px;
+                      }
+                      &:nth-of-type(3){
+                        top:30px;
+                        right:-280px;
+                      }
+                      &:nth-of-type(4){
+                        top:190px;
+                        left:-260px;
+                      }
+                      &:nth-of-type(5){
+                        top:190px;
+                        right:-260px;
+                      }*/
+}
+.right .content ul li#controlMess #canvas .fiveStyle .show:nth-of-type(5) img {
+    position: absolute;
+    cursor: pointer;
+    width: 80px;
+    height: 120px;
+    bottom: -40px;
+    left: -20px;
+    /*  &:nth-of-type(1){
+                          top:-60px;
+                          left: 80px;
+                        }
+                        &:nth-of-type(2){
+                          top: 20px;
+                          left:-40px;
+                        }
+                        &:nth-of-type(3){
+                          top:20px;
+                          right: -40px;
+                        }
+                        &:nth-of-type(4){
+                          bottom:-40px;
+                          left: -20px;
+                        }
+                        &:nth-of-type(5){
+                          bottom:-40px;
+                          right: -20px;
+                        }*/
+}
+.right .content ul li#controlMess #canvas .fiveStyle .show:nth-of-type(5) .float {
+    width: 200px;
+    padding: 10px;
+    position: absolute;
+    text-align: left;
+    background-color: #848484;
+    border-radius: 5px;
+    color: #fff;
+    top: 190px;
+    left: -260px;
+    /*&:nth-of-type(1){
+                        top:-50px;
+                        left:180px;
+                      }
+                      &:nth-of-type(2){
+                        top:30px;
+                        left:-280px;
+                      }
+                      &:nth-of-type(3){
+                        top:30px;
+                        right:-280px;
+                      }
+                      &:nth-of-type(4){
+                        top:190px;
+                        left:-260px;
+                      }
+                      &:nth-of-type(5){
+                        top:190px;
+                        right:-260px;
+                      }*/
+}
+.right .content ul li#controlMess #canvas .fiveStyle .show:nth-of-type(6) img {
+    position: absolute;
+    cursor: pointer;
+    width: 80px;
+    height: 120px;
+    bottom: -40px;
+    right: -20px;
+    /*  &:nth-of-type(1){
+                          top:-60px;
+                          left: 80px;
+                        }
+                        &:nth-of-type(2){
+                          top: 20px;
+                          left:-40px;
+                        }
+                        &:nth-of-type(3){
+                          top:20px;
+                          right: -40px;
+                        }
+                        &:nth-of-type(4){
+                          bottom:-40px;
+                          left: -20px;
+                        }
+                        &:nth-of-type(5){
+                          bottom:-40px;
+                          right: -20px;
+                        }*/
+}
+.right .content ul li#controlMess #canvas .fiveStyle .show:nth-of-type(6) .float {
+    width: 200px;
+    padding: 10px;
+    position: absolute;
+    text-align: left;
+    background-color: #848484;
+    border-radius: 5px;
+    color: #fff;
+    top: 190px;
+    right: -260px;
+    /*&:nth-of-type(1){
+                        top:-50px;
+                        left:180px;
+                      }
+                      &:nth-of-type(2){
+                        top:30px;
+                        left:-280px;
+                      }
+                      &:nth-of-type(3){
+                        top:30px;
+                        right:-280px;
+                      }
+                      &:nth-of-type(4){
+                        top:190px;
+                        left:-260px;
+                      }
+                      &:nth-of-type(5){
+                        top:190px;
+                        right:-260px;
+                      }*/
+}
+.right .content ul li#controlMess #canvas .fiveStyle .vip {
+    position: absolute;
+    top: 120px;
+    left: 80px;
+    width: 60px;
+    height: 20px;
+    line-height: 20px;
+}
+.right .content ul li#controlMess #canvas .sevenStyle {
+    width: 264px;
+    height: 264px;
+    margin: 0 auto;
+    position: relative;
+}
+.right .content ul li#controlMess #canvas .sevenStyle .circle {
+    width: 264px;
+    height: 264px;
+    border-radius: 132px;
+    border: 1px dashed #000;
+    text-align: center;
+}
+.right .content ul li#controlMess #canvas .sevenStyle .show {
+    width: 264px;
+    height: 264px;
+    margin-left: -132px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+}
+.right .content ul li#controlMess #canvas .sevenStyle .show:nth-of-type(2) img {
+    position: absolute;
+    cursor: pointer;
+    width: 50px;
+    height: 75px;
+    top: -40px;
+    left: 110px;
+    /*&:nth-of-type(1) {
+                        top: -40px;
+                        left: 110px;
+                      }
+                      &:nth-of-type(2) {
+                        top: 0px;
+                        left: 0px;
+                      }
+                      &:nth-of-type(3) {
+                        top: 0px;
+                        right: 0px;
+                      }
+                      &:nth-of-type(4) {
+                        top: 100px;
+                        left: -20px;
+                      }
+                      &:nth-of-type(5) {
+                        top: 100px;
+                        right: -20px;
+                      }
+                      &:nth-of-type(6) {
+                        bottom: -20px;
+                        left: 30px;
+                      }
+                      &:nth-of-type(7) {
+                        bottom: -20px;
+                        right: 30px;
+                      }*/
+}
+.right .content ul li#controlMess #canvas .sevenStyle .show:nth-of-type(2) .float {
+    width: 180px;
+    padding: 5px;
+    position: absolute;
+    background-color: #848484;
+    border-radius: 5px;
+    color: #fff;
+    top: -60px;
+    left: 180px;
+    /*&:nth-of-type(1) {
+                        top: -60px;
+                        left: 180px;
+                      }
+                      &:nth-of-type(2) {
+                        top: 0px;
+                        left: -200px;
+                      }
+                      &:nth-of-type(3) {
+                        top: 0px;
+                        left: 270px;
+                      }
+                      &:nth-of-type(4) {
+                        top: 100px;
+                        left: -220px;
+                      }
+                      &:nth-of-type(5) {
+                        top: 100px;
+                        right: -220px;
+                      }
+                      &:nth-of-type(6) {
+                        bottom: -10px;
+                        left: -170px;
+                      }
+                      &:nth-of-type(7) {
+                        bottom: -10px;
+                        right: -170px;
+                      }*/
+}
+.right .content ul li#controlMess #canvas .sevenStyle .show:nth-of-type(3) img {
+    position: absolute;
+    cursor: pointer;
+    width: 50px;
+    height: 75px;
+    top: 0px;
+    left: 0px;
+    /*&:nth-of-type(1) {
+                        top: -40px;
+                        left: 110px;
+                      }
+                      &:nth-of-type(2) {
+                        top: 0px;
+                        left: 0px;
+                      }
+                      &:nth-of-type(3) {
+                        top: 0px;
+                        right: 0px;
+                      }
+                      &:nth-of-type(4) {
+                        top: 100px;
+                        left: -20px;
+                      }
+                      &:nth-of-type(5) {
+                        top: 100px;
+                        right: -20px;
+                      }
+                      &:nth-of-type(6) {
+                        bottom: -20px;
+                        left: 30px;
+                      }
+                      &:nth-of-type(7) {
+                        bottom: -20px;
+                        right: 30px;
+                      }*/
+}
+.right .content ul li#controlMess #canvas .sevenStyle .show:nth-of-type(3) .float {
+    width: 180px;
+    padding: 5px;
+    position: absolute;
+    background-color: #848484;
+    border-radius: 5px;
+    color: #fff;
+    top: 0px;
+    left: -200px;
+    /*&:nth-of-type(1) {
+                        top: -60px;
+                        left: 180px;
+                      }
+                      &:nth-of-type(2) {
+                        top: 0px;
+                        left: -200px;
+                      }
+                      &:nth-of-type(3) {
+                        top: 0px;
+                        left: 270px;
+                      }
+                      &:nth-of-type(4) {
+                        top: 100px;
+                        left: -220px;
+                      }
+                      &:nth-of-type(5) {
+                        top: 100px;
+                        right: -220px;
+                      }
+                      &:nth-of-type(6) {
+                        bottom: -10px;
+                        left: -170px;
+                      }
+                      &:nth-of-type(7) {
+                        bottom: -10px;
+                        right: -170px;
+                      }*/
+}
+.right .content ul li#controlMess #canvas .sevenStyle .show:nth-of-type(4) img {
+    position: absolute;
+    cursor: pointer;
+    width: 50px;
+    height: 75px;
+    top: 0px;
+    right: 0px;
+    /*&:nth-of-type(1) {
+                        top: -40px;
+                        left: 110px;
+                      }
+                      &:nth-of-type(2) {
+                        top: 0px;
+                        left: 0px;
+                      }
+                      &:nth-of-type(3) {
+                        top: 0px;
+                        right: 0px;
+                      }
+                      &:nth-of-type(4) {
+                        top: 100px;
+                        left: -20px;
+                      }
+                      &:nth-of-type(5) {
+                        top: 100px;
+                        right: -20px;
+                      }
+                      &:nth-of-type(6) {
+                        bottom: -20px;
+                        left: 30px;
+                      }
+                      &:nth-of-type(7) {
+                        bottom: -20px;
+                        right: 30px;
+                      }*/
+}
+.right .content ul li#controlMess #canvas .sevenStyle .show:nth-of-type(4) .float {
+    width: 180px;
+    padding: 5px;
+    position: absolute;
+    background-color: #848484;
+    border-radius: 5px;
+    color: #fff;
+    top: 0px;
+    left: 270px;
+    /*&:nth-of-type(1) {
+                        top: -60px;
+                        left: 180px;
+                      }
+                      &:nth-of-type(2) {
+                        top: 0px;
+                        left: -200px;
+                      }
+                      &:nth-of-type(3) {
+                        top: 0px;
+                        left: 270px;
+                      }
+                      &:nth-of-type(4) {
+                        top: 100px;
+                        left: -220px;
+                      }
+                      &:nth-of-type(5) {
+                        top: 100px;
+                        right: -220px;
+                      }
+                      &:nth-of-type(6) {
+                        bottom: -10px;
+                        left: -170px;
+                      }
+                      &:nth-of-type(7) {
+                        bottom: -10px;
+                        right: -170px;
+                      }*/
+}
+.right .content ul li#controlMess #canvas .sevenStyle .show:nth-of-type(5) img {
+    position: absolute;
+    cursor: pointer;
+    width: 50px;
+    height: 75px;
+    top: 100px;
+    left: -20px;
+    /*&:nth-of-type(1) {
+                        top: -40px;
+                        left: 110px;
+                      }
+                      &:nth-of-type(2) {
+                        top: 0px;
+                        left: 0px;
+                      }
+                      &:nth-of-type(3) {
+                        top: 0px;
+                        right: 0px;
+                      }
+                      &:nth-of-type(4) {
+                        top: 100px;
+                        left: -20px;
+                      }
+                      &:nth-of-type(5) {
+                        top: 100px;
+                        right: -20px;
+                      }
+                      &:nth-of-type(6) {
+                        bottom: -20px;
+                        left: 30px;
+                      }
+                      &:nth-of-type(7) {
+                        bottom: -20px;
+                        right: 30px;
+                      }*/
+}
+.right .content ul li#controlMess #canvas .sevenStyle .show:nth-of-type(5) .float {
+    width: 180px;
+    padding: 5px;
+    position: absolute;
+    background-color: #848484;
+    border-radius: 5px;
+    color: #fff;
+    top: 100px;
+    left: -220px;
+    /*&:nth-of-type(1) {
+                        top: -60px;
+                        left: 180px;
+                      }
+                      &:nth-of-type(2) {
+                        top: 0px;
+                        left: -200px;
+                      }
+                      &:nth-of-type(3) {
+                        top: 0px;
+                        left: 270px;
+                      }
+                      &:nth-of-type(4) {
+                        top: 100px;
+                        left: -220px;
+                      }
+                      &:nth-of-type(5) {
+                        top: 100px;
+                        right: -220px;
+                      }
+                      &:nth-of-type(6) {
+                        bottom: -10px;
+                        left: -170px;
+                      }
+                      &:nth-of-type(7) {
+                        bottom: -10px;
+                        right: -170px;
+                      }*/
+}
+.right .content ul li#controlMess #canvas .sevenStyle .show:nth-of-type(6) img {
+    position: absolute;
+    cursor: pointer;
+    width: 50px;
+    height: 75px;
+    top: 100px;
+    right: -20px;
+    /*&:nth-of-type(1) {
+                        top: -40px;
+                        left: 110px;
+                      }
+                      &:nth-of-type(2) {
+                        top: 0px;
+                        left: 0px;
+                      }
+                      &:nth-of-type(3) {
+                        top: 0px;
+                        right: 0px;
+                      }
+                      &:nth-of-type(4) {
+                        top: 100px;
+                        left: -20px;
+                      }
+                      &:nth-of-type(5) {
+                        top: 100px;
+                        right: -20px;
+                      }
+                      &:nth-of-type(6) {
+                        bottom: -20px;
+                        left: 30px;
+                      }
+                      &:nth-of-type(7) {
+                        bottom: -20px;
+                        right: 30px;
+                      }*/
+}
+.right .content ul li#controlMess #canvas .sevenStyle .show:nth-of-type(6) .float {
+    width: 180px;
+    padding: 5px;
+    position: absolute;
+    background-color: #848484;
+    border-radius: 5px;
+    color: #fff;
+    top: 100px;
+    right: -220px;
+    /*&:nth-of-type(1) {
+                        top: -60px;
+                        left: 180px;
+                      }
+                      &:nth-of-type(2) {
+                        top: 0px;
+                        left: -200px;
+                      }
+                      &:nth-of-type(3) {
+                        top: 0px;
+                        left: 270px;
+                      }
+                      &:nth-of-type(4) {
+                        top: 100px;
+                        left: -220px;
+                      }
+                      &:nth-of-type(5) {
+                        top: 100px;
+                        right: -220px;
+                      }
+                      &:nth-of-type(6) {
+                        bottom: -10px;
+                        left: -170px;
+                      }
+                      &:nth-of-type(7) {
+                        bottom: -10px;
+                        right: -170px;
+                      }*/
+}
+.right .content ul li#controlMess #canvas .sevenStyle .show:nth-of-type(7) img {
+    position: absolute;
+    cursor: pointer;
+    width: 50px;
+    height: 75px;
+    bottom: -20px;
+    left: 30px;
+    /*&:nth-of-type(1) {
+                        top: -40px;
+                        left: 110px;
+                      }
+                      &:nth-of-type(2) {
+                        top: 0px;
+                        left: 0px;
+                      }
+                      &:nth-of-type(3) {
+                        top: 0px;
+                        right: 0px;
+                      }
+                      &:nth-of-type(4) {
+                        top: 100px;
+                        left: -20px;
+                      }
+                      &:nth-of-type(5) {
+                        top: 100px;
+                        right: -20px;
+                      }
+                      &:nth-of-type(6) {
+                        bottom: -20px;
+                        left: 30px;
+                      }
+                      &:nth-of-type(7) {
+                        bottom: -20px;
+                        right: 30px;
+                      }*/
+}
+.right .content ul li#controlMess #canvas .sevenStyle .show:nth-of-type(7) .float {
+    width: 180px;
+    padding: 5px;
+    position: absolute;
+    background-color: #848484;
+    border-radius: 5px;
+    color: #fff;
+    bottom: -10px;
+    left: -170px;
+    /*&:nth-of-type(1) {
+                        top: -60px;
+                        left: 180px;
+                      }
+                      &:nth-of-type(2) {
+                        top: 0px;
+                        left: -200px;
+                      }
+                      &:nth-of-type(3) {
+                        top: 0px;
+                        left: 270px;
+                      }
+                      &:nth-of-type(4) {
+                        top: 100px;
+                        left: -220px;
+                      }
+                      &:nth-of-type(5) {
+                        top: 100px;
+                        right: -220px;
+                      }
+                      &:nth-of-type(6) {
+                        bottom: -10px;
+                        left: -170px;
+                      }
+                      &:nth-of-type(7) {
+                        bottom: -10px;
+                        right: -170px;
+                      }*/
+}
+.right .content ul li#controlMess #canvas .sevenStyle .show:nth-of-type(8) img {
+    position: absolute;
+    cursor: pointer;
+    width: 50px;
+    height: 75px;
+    bottom: -20px;
+    right: 30px;
+    /*&:nth-of-type(1) {
+                          top: -40px;
+                          left: 110px;
+                        }
+                        &:nth-of-type(2) {
+                          top: 0px;
+                          left: 0px;
+                        }
+                        &:nth-of-type(3) {
+                          top: 0px;
+                          right: 0px;
+                        }
+                        &:nth-of-type(4) {
+                          top: 100px;
+                          left: -20px;
+                        }
+                        &:nth-of-type(5) {
+                          top: 100px;
+                          right: -20px;
+                        }
+                        &:nth-of-type(6) {
+                          bottom: -20px;
+                          left: 30px;
+                        }
+                        &:nth-of-type(7) {
+                          bottom: -20px;
+                          right: 30px;
+                        }*/
+}
+.right .content ul li#controlMess #canvas .sevenStyle .show:nth-of-type(8) .float {
+    width: 180px;
+    padding: 5px;
+    position: absolute;
+    background-color: #848484;
+    border-radius: 5px;
+    color: #fff;
+    bottom: -10px;
+    right: -170px;
+    /*&:nth-of-type(1) {
+                          top: -60px;
+                          left: 180px;
+                        }
+                        &:nth-of-type(2) {
+                          top: 0px;
+                          left: -200px;
+                        }
+                        &:nth-of-type(3) {
+                          top: 0px;
+                          left: 270px;
+                        }
+                        &:nth-of-type(4) {
+                          top: 100px;
+                          left: -220px;
+                        }
+                        &:nth-of-type(5) {
+                          top: 100px;
+                          right: -220px;
+                        }
+                        &:nth-of-type(6) {
+                          bottom: -10px;
+                          left: -170px;
+                        }
+                        &:nth-of-type(7) {
+                          bottom: -10px;
+                          right: -170px;
+                        }*/
+}
+.right .content ul li#controlMess #canvas .sevenStyle .vip {
+    position: absolute;
+    top: 120px;
+    left: 80px;
+    width: 60px;
+    height: 20px;
+    line-height: 20px;
+}
+.right .content ul li#controlMess .list {
+    margin-top: 10px;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: #fff;
+}
+.right .content ul li#controlMess .list .head {
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    font-size: 18px;
+    font-weight: bold;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    /* Firefox */
+    padding-left: 30px;
+}
+.right .content ul li#controlMess .list .Bcontent {
+    width: 98%;
+    margin: 0 10px;
+    font-size: 14px;
+}
+.right .content ul li#controlMess .list .Bcontent .title {
+    background-color: #F7F7F7;
+    width: 100%;
+    height: 46px;
+    line-height: 46px;
+    font-size: 14px;
+}
+.right .content ul li#controlMess .list .Bcontent .title li {
+    width: 20%;
+    float: left;
+}
+.right .content ul li#controlMess .list .Bcontent ul {
+    width: 100%;
+    height: 100%;
+    padding: 0 26px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    font-size: 12px;
+}
+.right .content ul li#controlMess .list .Bcontent ul li {
+    width: 100%;
+    height: 46px;
+    float: left;
+    line-height: 46px;
+}
+.right .content ul li#controlMess .list .Bcontent ul li.ip {
+    width: 30%;
+}
+.right .content ul li#controlMess .list .Bcontent ul li.role {
+    width: 20%;
+}
+.right .content ul li#controlMess .list .Bcontent ul li.feature {
+    width: 40%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.right .content ul li#controlMess .list .Bcontent ul li.version {
+    width: 10%;
+}
+.right .content ul li#controlMess .list .Bcontent ul li ul {
+    padding: 0;
+    position: relative;
+}
+.right .content ul li#controlMess .list .Bcontent ul li ul textarea {
+    width: 400px;
+    position: absolute;
+    top: -100px;
+    left: 600px;
+}
+.right .content ul li#controlMess .list .Bcontent ul li ul #window {
+    max-width: 500px;
+    height: 150px;
+    width: 100%;
+    line-height: 20px;
+    overflow: hidden;
+    word-wrap: break-word;
+    word-break: break-all;
+    position: absolute;
+    top: -100px;
+    left: 600px;
+    background-color: #fff;
+    border: 1px solid #c2c2c2;
+    z-index: 2;
+}
+.right .content ul li#controlMess .list .Bcontent ul li ul #window .listCon {
+    width: 490px;
+    float: left;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.right .content ul li#controlMess .list .Bcontent ul li ul #window .listBar {
+    width: 10px;
+    height: 150px;
+    float: right;
+    position: relative;
+}
+.right .content ul li#controlMess .list .Bcontent ul li ul #window .listBar .scrollBar {
+    width: 10px;
+    background-color: #5a5a5a;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.right .content ul li#controlMess .tab {
+    margin: 10px 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: #fff;
+}
+.right .content ul li#controlMess .tab .head {
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    font-size: 18px;
+    font-weight: bold;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    /* Firefox */
+    padding-left: 30px;
+}
+.right .content ul li#controlMess .tab .Ctrlcontent {
+    border: 1px solid #E8E8E8;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    padding-bottom: 15px;
+}
+.right .content ul li#controlMess .tab .Ctrlcontent .tabList {
+    width: 100%;
+    height: 51px;
+    line-height: 51px;
+    text-align: center;
+    border-bottom: 1px solid #E8E8E8;
+}
+.right .content ul li#controlMess .tab .Ctrlcontent .tabList li {
+    width: 183px;
+    border-right: 1px solid #E8E8E8;
+    float: left;
+}
+.right .content ul li#controlMess .tab .Ctrlcontent .tabList li.noStyle {
+    width: 298px;
+    border: none;
+    cursor: pointer;
+}
+.right .content ul li#controlMess .tab .Ctrlcontent .tabList li.click {
+    background-color: #999;
+    color: #fff;
+    cursor: pointer;
+}
+.right .content ul li#controlMess .tab .Ctrlcontent .tabList li.hover {
+    background-color: #c2c2c2;
+    color: #fff;
+    cursor: pointer;
+}
+.right .content ul li#controlMess .tab .Ctrlcontent .tabContent {
+    width: 100%;
+    height: 100%;
+}
+.right .content ul li#controlMess .tab .Ctrlcontent .tabContent .switchCon,
+.right .content ul li#controlMess .tab .Ctrlcontent .tabContent .Gateway,
+.right .content ul li#controlMess .tab .Ctrlcontent .tabContent .FW {
+    width: 100%;
+    height: 100%;
+    padding: 0 9px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+.right .content ul li#controlMess .tab .Ctrlcontent .tabContent .switchCon .VirtualSwt,
+.right .content ul li#controlMess .tab .Ctrlcontent .tabContent .Gateway .VirtualSwt,
+.right .content ul li#controlMess .tab .Ctrlcontent .tabContent .FW .VirtualSwt {
+    width: 100%;
+    height: 100%;
+}
+.right .content ul li#controlMess .tab .Ctrlcontent .tabContent .switchCon .physicalSwt,
+.right .content ul li#controlMess .tab .Ctrlcontent .tabContent .Gateway .physicalSwt,
+.right .content ul li#controlMess .tab .Ctrlcontent .tabContent .FW .physicalSwt {
+    width: 100%;
+    height: 100%;
+}
+.right .content ul li#controlMess .tab .Ctrlcontent .tabContent .switchCon .Stitle,
+.right .content ul li#controlMess .tab .Ctrlcontent .tabContent .Gateway .Stitle,
+.right .content ul li#controlMess .tab .Ctrlcontent .tabContent .FW .Stitle {
+    width: 100%;
+    height: 58px;
+    font-weight: bold;
+    line-height: 58px;
+}
+.right .content ul li#controlMess .tab .Ctrlcontent .tabContent .switchCon .Slist,
+.right .content ul li#controlMess .tab .Ctrlcontent .tabContent .Gateway .Slist,
+.right .content ul li#controlMess .tab .Ctrlcontent .tabContent .FW .Slist {
+    width: 100%;
+    height: 100%;
+    border: 1px solid #E8E8E8;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    text-align: center;
+}
+.right .content ul li#controlMess .tab .Ctrlcontent .tabContent .switchCon .Slist .nav,
+.right .content ul li#controlMess .tab .Ctrlcontent .tabContent .Gateway .Slist .nav,
+.right .content ul li#controlMess .tab .Ctrlcontent .tabContent .FW .Slist .nav {
+    width: 100%;
+    height: 46px;
+    line-height: 46px;
+    background-color: #E8E8E8;
+}
+.right .content ul li#controlMess .tab .Ctrlcontent .tabContent .switchCon .Slist .nav li,
+.right .content ul li#controlMess .tab .Ctrlcontent .tabContent .Gateway .Slist .nav li,
+.right .content ul li#controlMess .tab .Ctrlcontent .tabContent .FW .Slist .nav li {
+    width: 25%;
+    float: left;
+}
+.right .content ul li#controlMess .tab .Ctrlcontent .tabContent .switchCon .Slist .list,
+.right .content ul li#controlMess .tab .Ctrlcontent .tabContent .Gateway .Slist .list,
+.right .content ul li#controlMess .tab .Ctrlcontent .tabContent .FW .Slist .list {
+    width: 100%;
+}
+.right .content ul li#controlMess .tab .Ctrlcontent .tabContent .switchCon .Slist .list li,
+.right .content ul li#controlMess .tab .Ctrlcontent .tabContent .Gateway .Slist .list li,
+.right .content ul li#controlMess .tab .Ctrlcontent .tabContent .FW .Slist .list li {
+    height: 46px;
+    line-height: 46px;
+    width: 25%;
+    float: left;
+}
+.right .content ul li#controlMess .tab .Ctrlcontent .tabContent .switchCon .Slist .list li:nth-of-type(2),
+.right .content ul li#controlMess .tab .Ctrlcontent .tabContent .Gateway .Slist .list li:nth-of-type(2),
+.right .content ul li#controlMess .tab .Ctrlcontent .tabContent .FW .Slist .list li:nth-of-type(2) {
+    background-color: #fff;
+}
+.right .content ul li#controlMess .tab .Ctrlcontent .tabContent .switchCon .Slist ul,
+.right .content ul li#controlMess .tab .Ctrlcontent .tabContent .Gateway .Slist ul,
+.right .content ul li#controlMess .tab .Ctrlcontent .tabContent .FW .Slist ul {
+    width: 100%;
+    height: 100%;
+}
+.right .content ul li#controlMess .tab .Ctrlcontent .tabContent .switchCon .Slist ul li,
+.right .content ul li#controlMess .tab .Ctrlcontent .tabContent .Gateway .Slist ul li,
+.right .content ul li#controlMess .tab .Ctrlcontent .tabContent .FW .Slist ul li {
+    height: 46px;
+    line-height: 46px;
+}
+.right .content ul li#controlMess .tab .Ctrlcontent .tabContent .switchCon .Slist ul li:nth-of-type(2),
+.right .content ul li#controlMess .tab .Ctrlcontent .tabContent .Gateway .Slist ul li:nth-of-type(2),
+.right .content ul li#controlMess .tab .Ctrlcontent .tabContent .FW .Slist ul li:nth-of-type(2) {
+    background-color: #E8E8E8;
+}
+.right .content ul li#controlMess .tab .Ctrlcontent .tabContent .switchCon .Slist ul li .ip,
+.right .content ul li#controlMess .tab .Ctrlcontent .tabContent .Gateway .Slist ul li .ip,
+.right .content ul li#controlMess .tab .Ctrlcontent .tabContent .FW .Slist ul li .ip {
+    width: 50%;
+    float: left;
+}
+.right .content ul li#controlMess .tab .Ctrlcontent .tabContent .switchCon .Slist ul li .port,
+.right .content ul li#controlMess .tab .Ctrlcontent .tabContent .Gateway .Slist ul li .port,
+.right .content ul li#controlMess .tab .Ctrlcontent .tabContent .FW .Slist ul li .port {
+    width: 30%;
+    float: left;
+}
+.right .content ul li#controlMess .tab .Ctrlcontent .tabContent .switchCon .Slist ul li .deta,
+.right .content ul li#controlMess .tab .Ctrlcontent .tabContent .Gateway .Slist ul li .deta,
+.right .content ul li#controlMess .tab .Ctrlcontent .tabContent .FW .Slist ul li .deta {
+    width: 20%;
+    float: right;
+}
+.right .content ul li#controlMess .tab .Ctrlcontent .tabContent .switchCon .Slist ul li .deta a,
+.right .content ul li#controlMess .tab .Ctrlcontent .tabContent .Gateway .Slist ul li .deta a,
+.right .content ul li#controlMess .tab .Ctrlcontent .tabContent .FW .Slist ul li .deta a {
+    color: #0084c7;
+}
+.right .content ul li#controlMess .tab .Ctrlcontent .tabContent .switchCon .Slist .local,
+.right .content ul li#controlMess .tab .Ctrlcontent .tabContent .Gateway .Slist .local,
+.right .content ul li#controlMess .tab .Ctrlcontent .tabContent .FW .Slist .local {
+    width: 50%;
+    height: 100%;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    float: left;
+    border-right: 1px solid #E8E8E8;
+}
+.right .content ul li#controlMess .tab .Ctrlcontent .tabContent .switchCon .Slist .remote,
+.right .content ul li#controlMess .tab .Ctrlcontent .tabContent .Gateway .Slist .remote,
+.right .content ul li#controlMess .tab .Ctrlcontent .tabContent .FW .Slist .remote {
+    width: 50%;
+    height: 100%;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    float: right;
+}
+.right .content ul li#controlMess .tab .Ctrlcontent .tabContent .Gateway,
+.right .content ul li#controlMess .tab .Ctrlcontent .tabContent .FW {
+    display: none;
+}
+.right .content ul li#vtn .title {
+    width: 100%;
+    height: 60px;
+    border-bottom: 1px solid #E7E7E7;
+    line-height: 60px;
+    font-size: 20px;
+}
+.right .content ul li#vtn .select {
+    width: 100%;
+    height: 75px;
+    line-height: 75px;
+    font-size: 16px;
+    border-bottom: 1px solid #E7E7E7;
+}
+.right .content ul li#vtn .select #firstS {
+    width: 262px;
+    height: 34px;
+    margin-right: 15px;
+    font-size: 16px;
+}
+.right .content ul li#vtn .select #SecondS {
+    width: 205px;
+    height: 34px;
+    margin-right: 18px;
+    font-size: 16px;
+}
+.right .content ul li#vtn .select #threeS {
+    width: 200px;
+    height: 32px;
+    margin-right: 18px;
+    font-size: 16px;
+    border: 1px solid rgba(111, 111, 111, 0.74);
+}
+.right .content ul li#vtn .select button {
+    width: 64px;
+    height: 34px;
+    background-color: #4B97DB;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+.right .content ul li#vtn .content {
+    width: 100%;
+    height: 100%;
+}
+.right .content ul li#vtn .content ul li {
+    width: 100%;
+}
+.right .content ul li#vtn .content ul li .titleT {
+    width: 100%;
+    height: 46px;
+    line-height: 46px;
+    background-color: #F3F3F3;
+    color: #4A4A4A;
+    font-size: 16px;
+}
+.right .content ul li#vtn .content ul li#port ul {
+    position: relative;
+}
+.right .content ul li#vtn .content ul li#port ul li {
+    height: 46px;
+    line-height: 46px;
+    float: left;
+}
+.right .content ul li#vtn .content ul li#port ul li:nth-of-type(1) {
+    width: 30%;
+    margin-left: 3%;
+    margin-right: 4%;
+}
+.right .content ul li#vtn .content ul li#port ul li:nth-of-type(2) {
+    width: 8%;
+    margin-right: 4%;
+}
+.right .content ul li#vtn .content ul li#port ul li:nth-of-type(3) {
+    width: 14%;
+    margin-right: 4%;
+}
+.right .content ul li#vtn .content ul li#port ul li:nth-of-type(4) {
+    width: 30%;
+    margin-right: 3%;
+    /*���س�����������*/
+    overflow: hidden;
+    /*�������ֺ�����ʡ�Ժ�*/
+    text-overflow: ellipsis;
+    /*ǿ�Ʋ�����*/
+    white-space: nowrap;
+}
+.right .content ul li#vtn .content ul li#port ul p {
+    height: 36px;
+    line-height: 36px;
+    background-color: #8FC9FB;
+    position: absolute;
+    right: 0;
+    top: -30px;
+}
+.right .content ul li#vtn .content ul li#network ul li {
+    height: 46px;
+    line-height: 46px;
+    float: left;
+}
+.right .content ul li#vtn .content ul li#network ul li:nth-of-type(1) {
+    width: 30%;
+    margin-left: 3%;
+    margin-right: 4%;
+}
+.right .content ul li#vtn .content ul li#network ul li:nth-of-type(2) {
+    width: 15%;
+    margin-right: 4%;
+}
+.right .content ul li#vtn .content ul li#network ul li:nth-of-type(3) {
+    width: 40%;
+    margin-right: 3%;
+}
+.right .content ul li#vtn .content ul li#subnet ul li {
+    height: 46px;
+    line-height: 46px;
+    float: left;
+}
+.right .content ul li#vtn .content ul li#subnet ul li:nth-of-type(1) {
+    width: 25%;
+    margin-left: 3%;
+    margin-right: 4%;
+}
+.right .content ul li#vtn .content ul li#subnet ul li:nth-of-type(2) {
+    width: 12%;
+    margin-right: 4%;
+}
+.right .content ul li#vtn .content ul li#subnet ul li:nth-of-type(3) {
+    width: 12%;
+    margin-right: 4%;
+}
+.right .content ul li#vtn .content ul li#subnet ul li:nth-of-type(4) {
+    width: 31%;
+    margin-right: 3%;
+    /*���س�����������*/
+    overflow: hidden;
+    /*�������ֺ�����ʡ�Ժ�*/
+    text-overflow: ellipsis;
+    /*ǿ�Ʋ�����*/
+    white-space: nowrap;
+}
+.right .content ul li#vtn .content ul li#router ul {
+    position: relative;
+}
+.right .content ul li#vtn .content ul li#router ul li {
+    height: 46px;
+    line-height: 46px;
+    float: left;
+}
+.right .content ul li#vtn .content ul li#router ul li:nth-of-type(1) {
+    width: 30%;
+    margin-left: 3%;
+    margin-right: 4%;
+}
+.right .content ul li#vtn .content ul li#router ul li:nth-of-type(2) {
+    width: 15%;
+    margin-right: 4%;
+}
+.right .content ul li#vtn .content ul li#router ul li:nth-of-type(3) {
+    width: 40%;
+    margin-right: 3%;
+    /*���س�����������*/
+    overflow: hidden;
+    /*�������ֺ�����ʡ�Ժ�*/
+    text-overflow: ellipsis;
+    /*ǿ�Ʋ�����*/
+    white-space: nowrap;
+}
+.right .content ul li#vtn .content ul li#router ul p {
+    height: 36px;
+    line-height: 36px;
+    background-color: #8FC9FB;
+    position: absolute;
+    right: 10px;
+    top: -30px;
+}
+.right .content ul li#vtn .content ul li#floatingIP ul li {
+    height: 46px;
+    line-height: 46px;
+    float: left;
+}
+.right .content ul li#vtn .content ul li#floatingIP ul li:nth-of-type(1) {
+    width: 25%;
+    margin-left: 3%;
+    margin-right: 4%;
+}
+.right .content ul li#vtn .content ul li#floatingIP ul li:nth-of-type(2) {
+    width: 15%;
+    margin-right: 4%;
+}
+.right .content ul li#vtn .content ul li#floatingIP ul li:nth-of-type(3) {
+    width: 15%;
+    margin-right: 4%;
+}
+.right .content ul li#vtn .content ul li#floatingIP ul li:nth-of-type(4) {
+    width: 25%;
+    margin-right: 3%;
+    /*���س�����������*/
+    overflow: hidden;
+    /*�������ֺ�����ʡ�Ժ�*/
+    text-overflow: ellipsis;
+    /*ǿ�Ʋ�����*/
+    white-space: nowrap;
+}
+.right .content ul li#vtn .content ul li#securitygroup ul li {
+    height: 46px;
+    line-height: 46px;
+    float: left;
+}
+.right .content ul li#vtn .content ul li#securitygroup ul li:nth-of-type(1) {
+    width: 30%;
+    margin-left: 3%;
+    margin-right: 4%;
+}
+.right .content ul li#vtn .content ul li#securitygroup ul li:nth-of-type(2) {
+    width: 20%;
+    margin-right: 4%;
+}
+.right .content ul li#vtn .content ul li#securitygroup ul li:nth-of-type(3) {
+    width: 35%;
+    margin-right: 4%;
+}
+.right .content ul li#vtn .content ul li#securitygrouprule ul li {
+    height: 46px;
+    line-height: 46px;
+    float: left;
+}
+.right .content ul li#vtn .content ul li#securitygrouprule ul li:nth-of-type(1) {
+    width: 25%;
+    margin-left: 3%;
+    margin-right: 3%;
+}
+.right .content ul li#vtn .content ul li#securitygrouprule ul li:nth-of-type(2) {
+    width: 11%;
+    margin-right: 4%;
+}
+.right .content ul li#vtn .content ul li#securitygrouprule ul li:nth-of-type(3) {
+    width: 10%;
+    margin-right: 1%;
+}
+.right .content ul li#vtn .content ul li#securitygrouprule ul li:nth-of-type(4) {
+    width: 10%;
+    margin-right: 1%;
+}
+.right .content ul li#vtn .content ul li#securitygrouprule ul li:nth-of-type(5) {
+    width: 11%;
+    margin-right: 5%;
+}
+.right .content ul li#vtn .content ul li#securitygrouprule ul li:nth-of-type(6) {
+    width: 11%;
+}
+.right .content ul li#openflow .title {
+    width: 100%;
+    height: 60px;
+    border-bottom: 1px solid #E7E7E7;
+    line-height: 60px;
+    font-size: 20px;
+}
+.right .content ul li#openflow .select {
+    width: 100%;
+    height: 75px;
+    line-height: 75px;
+    font-size: 16px;
+    border-bottom: 1px solid #E7E7E7;
+}
+.right .content ul li#openflow .select #firstS {
+    width: 262px;
+    height: 34px;
+    margin-right: 15px;
+    font-size: 16px;
+}
+.right .content ul li#openflow .select #SecondS {
+    width: 203px;
+    height: 32px;
+    margin-right: 18px;
+    font-size: 16px;
+    border: 1px solid #B1B1B6;
+}
+.right .content ul li#openflow .select button {
+    width: 64px;
+    height: 34px;
+    background-color: #4B97DB;
+    color: #fff;
+    font-size: 16px;
+}
+.right .content ul li#openflow .content {
+    width: 100%;
+    height: 100%;
+}
+.right .content ul li#openflow .content .titleT {
+    width: 100%;
+    height: 46px;
+    line-height: 46px;
+    background-color: #F3F3F3;
+    color: #4A4A4A;
+    font-size: 16px;
+}
+.right .content ul li#openflow .content ul li {
+    height: 46px;
+    line-height: 46px;
+    float: left;
+}
+.right .content ul li#openflow .content ul li:nth-of-type(1) {
+    width: 9%;
+    margin-left: 3%;
+    margin-right: 4%;
+}
+.right .content ul li#openflow .content ul li:nth-of-type(2) {
+    width: 9%;
+    margin-right: 4%;
+}
+.right .content ul li#openflow .content ul li:nth-of-type(3) {
+    width: 20%;
+    margin-right: 4%;
+}
+.right .content ul li#openflow .content ul li:nth-of-type(4) {
+    width: 20%;
+    margin-right: 4%;
+}
+.right .content ul li#openflow .content ul li:nth-of-type(5) {
+    width: 20%;
+    margin-right: 3%;
+    /*���س�����������*/
+    overflow: hidden;
+    /*�������ֺ�����ʡ�Ժ�*/
+    text-overflow: ellipsis;
+    /*ǿ�Ʋ�����*/
+    white-space: nowrap;
+}
+.right .content ul li#node .title {
+    width: 100%;
+    height: 60px;
+    border-bottom: 1px solid #E7E7E7;
+    line-height: 60px;
+    font-size: 20px;
+}
+.right .content ul li#node .select {
+    width: 100%;
+    height: 75px;
+    line-height: 75px;
+    font-size: 16px;
+    border-bottom: 1px solid #E7E7E7;
+}
+.right .content ul li#node .select #firstS {
+    width: 262px;
+    height: 34px;
+    margin-right: 15px;
+    font-size: 16px;
+}
+.right .content ul li#node .select #SecondS {
+    width: 203px;
+    height: 32px;
+    margin-right: 18px;
+    font-size: 16px;
+    border: 1px solid #B1B1B6;
+}
+.right .content ul li#node .select button {
+    width: 64px;
+    height: 34px;
+    background-color: #4B97DB;
+    color: #fff;
+    font-size: 16px;
+}
+.right .content ul li#node .content {
+    width: 100%;
+    height: 100%;
+}
+.right .content ul li#node .content .titleT {
+    width: 100%;
+    height: 46px;
+    line-height: 46px;
+    background-color: #F3F3F3;
+    color: #4A4A4A;
+    font-size: 16px;
+}
+.right .content ul li#node .content ul li {
+    height: 46px;
+    line-height: 46px;
+    float: left;
+}
+.right .content ul li#node .content ul li:nth-of-type(1) {
+    width: 12%;
+    margin-left: 3%;
+    margin-right: 4%;
+}
+.right .content ul li#node .content ul li:nth-of-type(2) {
+    width: 12%;
+    margin-right: 4%;
+}
+.right .content ul li#node .content ul li:nth-of-type(3) {
+    width: 12%;
+    margin-right: 4%;
+}
+.right .content ul li#node .content ul li:nth-of-type(4) {
+    width: 12%;
+    margin-right: 4%;
+}
+.right .content ul li#node .content ul li:nth-of-type(5) {
+    width: 12%;
+    margin-right: 4%;
+}
+.right .content ul li#node .content ul li:nth-of-type(6) {
+    width: 12%;
+    margin-right: 3%;
+}
+.right .content ul li#interface .title {
+    width: 100%;
+    height: 60px;
+    border-bottom: 1px solid #E7E7E7;
+    line-height: 60px;
+    font-size: 20px;
+}
+.right .content ul li#interface .select {
+    width: 100%;
+    height: 75px;
+    line-height: 75px;
+    font-size: 16px;
+    border-bottom: 1px solid #E7E7E7;
+}
+.right .content ul li#interface .select #firstS {
+    width: 260px;
+    height: 32px;
+    margin-right: 15px;
+    font-size: 16px;
+}
+.right .content ul li#interface .select #SecondS {
+    width: 205px;
+    height: 34px;
+    margin-right: 18px;
+    font-size: 16px;
+    border: 1px solid #B1B1B6;
+}
+.right .content ul li#interface .select button {
+    width: 64px;
+    height: 34px;
+    background-color: #4B97DB;
+    color: #fff;
+    font-size: 16px;
+}
+.right .content ul li#interface .content {
+    width: 100%;
+    height: 100%;
+}
+.right .content ul li#interface .content .titleT {
+    width: 100%;
+    height: 46px;
+    line-height: 46px;
+    background-color: #F3F3F3;
+    color: #4A4A4A;
+    font-size: 16px;
+}
+.right .content ul li#interface .content ul li {
+    height: 46px;
+    line-height: 46px;
+    float: left;
+}
+.right .content ul li#interface .content ul li:nth-of-type(1) {
+    width: 15%;
+    margin-left: 3%;
+    margin-right: 3%;
+}
+.right .content ul li#interface .content ul li:nth-of-type(2) {
+    width: 15%;
+    margin-right: 3%;
+}
+.right .content ul li#interface .content ul li:nth-of-type(3) {
+    width: 15%;
+    margin-right: 3%;
+}
+.right .content ul li#interface .content ul li:nth-of-type(4) {
+    width: 8%;
+    margin-right: 2%;
+}
+.right .content ul li#interface .content ul li:nth-of-type(5) {
+    width: 8%;
+    margin-right: 3%;
+}
+.right .content ul li#interface .content ul li:nth-of-type(6) {
+    width: 8%;
+    margin-right: 3%;
+}
+.right .content ul li#interface .content ul li:nth-of-type(7) {
+    width: 8%;
+    margin-right: 3%;
+}

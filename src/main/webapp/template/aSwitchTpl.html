@@ -1,0 +1,134 @@
+<li id="switchMess" ng-controller="switchCtrl">
+    <div class="switch_title">
+        交换机信息
+    </div>
+    <div id="main">
+        <div class="pic">
+            <div class="floating" ng-class="{'color1':showtimes1}">
+                openflow Controller IP:<br/>
+                192.168.111.111
+            </div>
+            <div class="floating" ng-class="{'color2':showtimes2}">
+                openflow Controller IP:<br/>
+                192.168.111.111
+            </div>
+            <div class="floating" ng-class="{'color3':showtimes3}">
+                openflow Controller IP:<br/>
+                192.168.111.111
+            </div>
+            <div class="floating" ng-class="{'color4':showtimes4}">
+                openflow Controller IP:<br/>
+                192.168.111.111
+            </div>
+            <div class="floating" ng-class="{'color5':showtimes5}">
+                openflow Controller IP:<br/>
+                192.168.111.111
+            </div>
+            <span ng-mouseenter="showtimes1 = true" ng-mouseleave="showtimes1 = false"></span>
+            <span ng-mouseenter="showtimes2= true" ng-mouseleave="showtimes2 = false"></span>
+            <span ng-mouseenter="showtimes3 = true" ng-mouseleave="showtimes3 = false"></span>
+            <span ng-mouseenter="showtimes4 = true" ng-mouseleave="showtimes4 = false"></span>
+            <span ng-mouseenter="showtimes5 = true" ng-mouseleave="showtimes5 = false"></span>
+            <span ng-mouseenter="showtimes = true" ng-mouseleave="showtimes = false"></span>
+            <span ng-mouseenter="showtimes = true" ng-mouseleave="showtimes = false"></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+    <div class="list">
+        <div class="head">基本信息及统计</div>
+        <div class=" Bcontent">
+            <ul class="title">
+                <li>IP</li>
+                <li>dpid</li>
+                <li>openflow</li>
+                <li>tunnel&nbsp;port</li>
+                <li>虚拟机连接数</li>
+            </ul>
+            <ul>
+                <li>
+                    <ul>
+                        <li>{{switchData.ip}}</li>
+                        <li>{{switchData.dpid}}</li>
+                        <li>{{switchData.openfolw}}</li>
+                        <li>{{switchData.tunnelPort}}</li>
+                        <li>{{switchData.virtualLink}}</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="list">
+        <div class="head">switch&nbsp;port</div>
+        <ul class="Scontent">
+            <ul class="title">
+                <li class="portName">port&nbsp;名称</li>
+                <li class="macAd">mac地址</li>
+                <li class="receivePac">收包数</li>
+                <li class="ContractNum">发包数</li>
+                <li class="ofport">ofport号</li>
+                <li class="speed">速率</li>
+                <li class="mtu">MTU</li>
+                <li class="UUID">管理UUID</li>
+            </ul>
+            <ul>
+                <li ng-repeat="item in switchData.portList">
+                    <ul>
+                        <li class="portName"><a href="#/interface">{{item.portName}}</a></li>
+                        <li class="macAd">{{item.macAd}}</li>
+                        <li class="receivePac">{{item.receivePac}}</li>
+                        <li class="ContractNum">{{item.contractNum}}</li>
+                        <li class="ofport">{{item.ofPort}}</li>
+                        <li class="speed">{{item.speed}}</li>
+                        <li class="mtu">{{item.mtu}}</li>
+                        <li class="UUID">{{item.UUID}}</li>
+                    </ul>
+                </li>
+            </ul>
+        </ul>
+    </div>
+</li>

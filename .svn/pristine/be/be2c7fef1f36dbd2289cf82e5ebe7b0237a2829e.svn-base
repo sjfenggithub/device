@@ -1,0 +1,29 @@
+package com.yd.test;
+
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+
+import com.yd.service.ISwitchService;
+
+@RunWith(SpringJUnit4ClassRunner.class)
+@ContextConfiguration(locations = {"classpath:spring.xml"})
+public class TestSwitch {
+
+	@Autowired
+	private ISwitchService switchService;
+	
+	@Test
+	public void select(){
+		try {
+			String selectSwitch = switchService.selectSwitch();
+			System.out.println(selectSwitch);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+}
+
+	

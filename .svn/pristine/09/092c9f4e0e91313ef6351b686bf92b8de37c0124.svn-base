@@ -1,0 +1,28 @@
+package com.yd.service.impl;
+
+import java.net.URL;
+
+import net.sf.json.JSONObject;
+
+import org.springframework.stereotype.Service;
+
+import com.yd.controller.ContController;
+import com.yd.service.ITopoService;
+import com.yd.util.GetSwitchInfoService;
+import com.yd.util.TheUtil;
+
+@Service("topoService")
+public class TopoServiceImpl implements ITopoService {
+
+	TheUtil theUtil = new TheUtil();
+	
+	@Override
+	public String selectTopoList() throws Exception {
+		String jsonobject = theUtil.getUpdateString();
+		return jsonobject;
+	}
+
+	
+}
+
+	

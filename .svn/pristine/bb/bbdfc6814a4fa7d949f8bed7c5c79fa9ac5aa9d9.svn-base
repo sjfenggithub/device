@@ -1,0 +1,28 @@
+package com.yd.service.impl;
+
+import net.sf.json.JSONObject;
+
+import org.springframework.stereotype.Service;
+
+import com.yd.service.IContService;
+import com.yd.util.TheUtil;
+
+@Service("contService")
+public class ContServiceImpl implements IContService {
+	
+	TheUtil theUtil = new TheUtil();
+	
+	@Override
+	public String selectContList() throws Exception {
+//		String s_xmlpath="com/yd/json/apkinfo.json";
+//		String json = theUtil.ReadFile(s_xmlpath);
+//      String json = theUtil.ReadFile("D:/work/IdeaProjects/controllerdevice/src/main/java/com/yd/json/apkinfo.json");
+//		String jsonobject = JSONObject.fromObject(json).toString();
+//		return jsonobject;
+		GetCtrlBasicInfoService gcbis = new GetCtrlBasicInfoService();
+		String str = gcbis.getJsonString();
+		return str;
+	}
+}
+
+	

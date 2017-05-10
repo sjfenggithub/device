@@ -1,0 +1,109 @@
+[
+    {
+        "openfolw": "4788",
+        "portList": [
+            {
+                "mtu": "1500",
+                "macAd": "",
+                "speed": "1000M",
+                "UUID": "4baa5bee3d8341a0bf22a23ec9103f23",
+                "contractNum": "",
+                "portName": "vxlan-109.0.0.146",
+                "ofPort": 2,
+                "receivePac": ""
+            },
+            {
+                "mtu": "1500",
+                "macAd": "",
+                "speed": "1000M",
+                "UUID": "5530b3073b3442a9b76852543c386a71",
+                "contractNum": "",
+                "portName": "tap95ce33e0-4f",
+                "ofPort": 8,
+                "receivePac": ""
+            },
+            {
+                "mtu": "1500",
+                "macAd": "",
+                "speed": "1000M",
+                "UUID": "e05bc58641bb417999b286609b5c8230",
+                "contractNum": "",
+                "portName": "vxlan-109.0.0.145",
+                "ofPort": 1,
+                "receivePac": ""
+            }
+        ],
+        "virtualLink": 1,
+        "dpid": "9252445876836",
+        "tunnelPort": "5637",
+        "ip": "192.168.224.18"
+    },
+    {
+        "openfolw": "4788",
+        "portList": [
+            {
+                "mtu": "1500",
+                "macAd": "",
+                "speed": "1000M",
+                "UUID": "2c89f2aff2c24f1e91082846d9ed748f",
+                "contractNum": "",
+                "portName": "vxlan-109.0.0.146",
+                "ofPort": 1,
+                "receivePac": ""
+            },
+            {
+                "mtu": "1500",
+                "macAd": "fa:16:3e:3d:07:8c",
+                "speed": "1000M",
+                "UUID": "f213c5848b2f4742bdd9040b14da7c48",
+                "contractNum": "",
+                "portName": "tap1b2563bd-28",
+                "ofPort": 12,
+                "receivePac": ""
+            },
+            {
+                "mtu": "1500",
+                "macAd": "",
+                "speed": "1000M",
+                "UUID": "44324f9129ba4114b47cab909e9669e5",
+                "contractNum": "",
+                "portName": "vxlan-109.0.0.144",
+                "ofPort": 2,
+                "receivePac": ""
+            }
+        ],
+        "virtualLink": 1,
+        "dpid": "97003074589285",
+        "tunnelPort": "5637",
+        "ip": "192.168.224.19"
+    },
+    {
+        "openfolw": "4788",
+        "portList": [
+            {
+                "mtu": "1500",
+                "macAd": "",
+                "speed": "1000M",
+                "UUID": "b72e8f102ece4bb1a6c4f3ec141a8685",
+                "contractNum": "",
+                "portName": "vxlan-109.0.0.145",
+                "ofPort": 1,
+                "receivePac": ""
+            },
+            {
+                "mtu": "1500",
+                "macAd": "",
+                "speed": "1000M",
+                "UUID": "bae527610e8046708ffd255753aef483",
+                "contractNum": "",
+                "portName": "vxlan-109.0.0.144",
+                "ofPort": 2,
+                "receivePac": ""
+            }
+        ],
+        "virtualLink": 0,
+        "dpid": "13832136440842",
+        "tunnelPort": "5637",
+        "ip": "192.168.224.20"
+    }
+]

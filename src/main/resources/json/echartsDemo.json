@@ -1,0 +1,433 @@
+{
+    "Controller": [
+        {
+            "name": "controller",
+            "category": 0,
+            "value":"con:1111<br/>2222"
+        }
+    ],
+    "NFV": [
+        {
+            "name": "NFV-1",
+            "category": 1,
+            "value":"IP:192.168.1.0<br/>厂家:IBM<br/>版本:9.0.3<br/>",
+            "url":"http://192.168.16.154:8080/NFV-DSM/login.jsp"
+        }, {
+            "name": "NFV-2",
+            "category": 1,
+            "value":"IP:192.168.1.0<br/>厂家:IBM<br/>版本:9.0.3",
+            "url":"http://192.168.16.154:8080/NFV-DSM/login.jsp"
+            
+        }, {
+            "name": "NFV-3",
+            "category": 1,
+             "value":"IP:192.168.1.0<br/>厂家:IBM<br/>版本:9.0.3",
+             "url":"http://192.168.16.154:8080/NFV-DSM/login.jsp"
+        }, {
+            "name": "NFV-4",
+            "category": 1,
+             "value":"IP:192.168.1.0<br/>厂家 :IBM<br/>版本:9.0.3",
+             "url":"http://www.sina.com.cn"
+        }, {
+            "name": "NFV-5",
+            "category": 1,
+             "value":"IP:192.168.1.0<br/>厂家:IBM<br/>版本:9.0.3",
+             "url":"http://www.suning.com"
+        }
+    ],
+    "Switch": [
+      {
+            "name": "switch-2",
+            "category": 2,
+            "value":"dpid:dpid<br/>MAC:MAC<br/>type:type"
+        },{
+            "name": "switch-3",
+            "category": 2,
+            "value":"dpid:dpid<br/>MAC:MAC<br/>type:type"
+        },{
+            "name": "switch-4",
+            "category": 3,
+            "value":"dpid:dpid<br/>MAC:MAC<br/>type:type"
+        },{
+            "name": "switch-5",
+            "category": 2,
+            "value":"dpid:dpid<br/>MAC:MAC<br/>type:type"
+        }, {
+            "name": "switch-6",
+            "category": 3,
+            "value":"dpid:dpid<br/>MAC:MAC<br/>type:type"
+           
+        },{
+            "name": "switch-7",
+            "category": 2,
+            "value":"dpid:dpid<br/>MAC:MAC<br/>type:type"
+        },{
+            "name": "switch-8",
+            "category": 3,
+            "value":"dpid:dpid<br/>MAC:MAC<br/>type:type"
+        },{
+            "name": "switch-9",
+            "category": 2,
+            "value":"dpid:dpid<br/>MAC:MAC<br/>type:type"
+        },{
+            "name": "switch-10",
+            "category": 2,
+            "value":"dpid:dpid<br/>MAC:MAC<br/>type:type"
+        },{
+            "name": "switch-11",
+            "category": 3,
+            "value":"dpid:dpid<br/>MAC:MAC<br/>type:type"
+           
+        },{
+            "name": "switch-12",
+            "category": 2,
+            "value":"dpid:dpid<br/>MAC:MAC<br/>type:type"
+        },{
+            "name": "switch-13",
+            "category": 2,
+            "value":"dpid:dpid<br/>MAC:MAC<br/>type:type"
+        },{
+            "name": "switch-14",
+            "category": 3,
+            "value":"dpid:dpid<br/>MAC:MAC<br/>type:type"
+        },{
+            "name": "switch-15",
+            "category": 2,
+            "value":"dpid:dpid<br/>MAC:MAC<br/>type:type"
+        }, {
+            "name": "switch-16",
+            "category": 2,
+            "value":"dpid:dpid<br/>MAC:MAC<br/>type:type"
+           
+        },{
+            "name": "switch-17",
+            "category": 3,
+            "value":"dpid:dpid<br/>MAC:MAC<br/>type:type"
+        },{
+            "name": "switch-18",
+            "category": 2,
+            "value":"dpid:dpid<br/>MAC:MAC<br/>type:type"
+        },{
+            "name": "switch-19",
+            "category": 3,
+            "value":"dpid:dpid<br/>MAC:MAC<br/>type:type"
+        },{
+            "name": "switch-20",
+            "category": 3,
+            "value":"dpid:dpid<br/>MAC:MAC<br/>type:type"
+        }, {
+            "name": "switch-21",
+            "category": 2,
+            "value":"dpid:dpid<br/>MAC:MAC<br/>type:type"
+           
+        },{
+            "name": "switch-22",
+            "category": 2,
+            "value":"dpid:dpid<br/>MAC:MAC<br/>type:type"
+        },{
+            "name": "switch-23",
+            "category": 2,
+            "value":"dpid:dpid<br/>MAC:MAC<br/>type:type"
+        },{
+            "name": "switch-24",
+            "category": 2,
+            "value":"dpid:dpid<br/>MAC:MAC<br/>type:type"
+        },{
+            "name": "switch-25",
+            "category": 3,
+            "value":"dpid:dpid<br/>MAC:MAC<br/>type:type"
+        }, {
+            "name": "switch-26",
+            "category": 2,
+            "value":"dpid:dpid<br/>MAC:MAC<br/>type:type"
+           
+        },{
+            "name": "switch-27",
+            "category": 2,
+            "value":"dpid:dpid<br/>MAC:MAC<br/>type:type"
+        },{
+            "name": "switch-28",
+            "category": 3,
+            "value":"dpid:dpid<br/>MAC:MAC<br/>type:type"
+        },{
+            "name": "switch-29",
+            "category": 2,
+            "value":"dpid:dpid<br/>MAC:MAC<br/>type:type"
+        },{
+            "name": "switch-30",
+            "category": 3,
+            "value":"dpid:dpid<br/>MAC:MAC<br/>type:type"
+        },{
+            "name": "switch-31",
+            "category": 3,
+            "value":"dpid:dpid<br/>MAC:MAC<br/>type:type"
+           
+        },{
+            "name": "switch-32",
+            "category": 2,
+            "value":"dpid:dpid<br/>MAC:MAC<br/>type:type"
+        },{
+            "name": "switch-33",
+            "category": 2,
+            "value":"dpid:dpid<br/>MAC:MAC<br/>type:type"
+        },{
+            "name": "switch-34",
+            "category": 2,
+            "value":"dpid:dpid<br/>MAC:MAC<br/>type:type"
+        },{
+            "name": "switch-35",
+            "category": 3,
+            "value":"dpid:dpid<br/>MAC:MAC<br/>type:type"
+        }, {
+            "name": "switch-36",
+            "category": 2,
+            "value":"dpid:dpid<br/>MAC:MAC<br/>type:type"
+           
+        },{
+            "name": "switch-37",
+            "category": 3,
+            "value":"dpid:dpid<br/>MAC:MAC<br/>type:type"
+        },{
+            "name": "switch-38",
+            "category": 3,
+            "value":"dpid:dpid<br/>MAC:MAC<br/>type:type"
+        },{
+            "name": "switch-39",
+            "category": 2,
+            "value":"dpid:dpid<br/>MAC:MAC<br/>type:type"
+        },{
+            "name": "switch-40",
+            "category": 2,
+            "value":"dpid:dpid<br/>MAC:MAC<br/>type:type"
+        }
+    ],
+    "dot": [
+        {
+            "name": "more",
+            "category": 2,
+            "value":"总数：1000<br/>按type统计数：100"
+        }
+    ],
+    "edge": [
+        {
+            "source": "controller",
+            "target": "NFV-1",
+            "value":10
+
+        },
+        {
+            "source": "controller",
+            "target": "NFV-2",
+            "value":10
+        },
+        {
+            "source": "controller",
+            "target": "NFV-3",
+            "value":20
+        },
+        {
+            "source": "controller",
+            "target": "NFV-4",
+            "value":10
+
+        },
+        {
+            "source": "controller",
+            "target": "NFV-5",
+            "value":80
+        },
+        {
+            "source": "controller",
+            "target": "dot",
+            "value":70
+        },
+        {
+            "source": "controller",
+            "target": "switch-1",
+            "value":50
+        }, {
+            "source": "controller",
+            "target": "switch-2",
+            "value":50
+        }, {
+            "source": "controller",
+            "target": "switch-3",
+            "value":50
+        }, {
+            "source": "controller",
+            "target": "switch-4",
+            "value":60
+        }, {
+            "source": "controller",
+            "target": "switch-5",
+            "value":60
+        },
+        {
+            "source": "controller",
+            "target": "switch-6",
+            "value":50
+        }, {
+            "source": "controller",
+            "target": "switch-7",
+            "value":50
+        }, {
+            "source": "controller",
+            "target": "switch-8",
+            "value":50
+        }, {
+            "source": "controller",
+            "target": "switch-9",
+            "value":60
+        }, {
+            "source": "controller",
+            "target": "switch-10",
+            "value":60
+        },{
+            "source": "NFV-1",
+            "target": "switch-11",
+            "value":60
+        }, {
+            "source": "NFV-2",
+            "target": "switch-12",
+            "value":40
+        }, {
+            "source": "NFV-3",
+            "target": "switch-13",
+            "value":30
+        }, {
+            "source": "NFV-4",
+            "target": "switch-14",
+            "value":20
+        }, {
+            "source": "NFV-5",
+            "target": "switch-15",
+            "value":10
+        },
+        {
+            "source": "controller",
+            "target": "switch-11",
+            "value":50
+        }, {
+            "source": "controller",
+            "target": "switch-12",
+            "value":50
+        }, {
+            "source": "controller",
+            "target": "switch-13",
+            "value":50
+        }, {
+            "source": "controller",
+            "target": "switch-14",
+            "value":60
+        }, {
+            "source": "controller",
+            "target": "switch-25",
+            "value":60
+        },
+        {
+            "source": "controller",
+            "target": "switch-16",
+            "value":50
+        }, {
+            "source": "controller",
+            "target": "switch-17",
+            "value":50
+        }, {
+            "source": "controller",
+            "target": "switch-18",
+            "value":50
+        }, {
+            "source": "controller",
+            "target": "switch-19",
+            "value":60
+        }, {
+            "source": "controller",
+            "target": "switch-20",
+            "value":60
+        },
+        {
+            "source": "controller",
+            "target": "switch-21",
+            "value":50
+        }, {
+            "source": "controller",
+            "target": "switch-22",
+            "value":50
+        }, {
+            "source": "controller",
+            "target": "switch-23",
+            "value":50
+        }, {
+            "source": "controller",
+            "target": "switch-24",
+            "value":60
+        }, {
+            "source": "controller",
+            "target": "switch-25",
+            "value":60
+        },
+        {
+            "source": "controller",
+            "target": "switch-26",
+            "value":50
+        }, {
+            "source": "controller",
+            "target": "switch-27",
+            "value":50
+        }, {
+            "source": "controller",
+            "target": "switch-28",
+            "value":50
+        }, {
+            "source": "controller",
+            "target": "switch-29",
+            "value":60
+        }, {
+            "source": "controller",
+            "target": "switch-30",
+            "value":60
+        },
+        {
+            "source": "controller",
+            "target": "switch-31",
+            "value":50
+        }, {
+            "source": "controller",
+            "target": "switch-32",
+            "value":50
+        }, {
+            "source": "controller",
+            "target": "switch-33",
+            "value":50
+        }, {
+            "source": "controller",
+            "target": "switch-34",
+            "value":60
+        }, {
+            "source": "controller",
+            "target": "switch-35",
+            "value":60
+        },
+        {
+            "source": "controller",
+            "target": "switch-36",
+            "value":50
+        }, {
+            "source": "controller",
+            "target": "switch-37",
+            "value":50
+        }, {
+            "source": "controller",
+            "target": "switch-38",
+            "value":50
+        }, {
+            "source": "controller",
+            "target": "switch-39",
+            "value":60
+        }, {
+            "source": "controller",
+            "target": "switch-40",
+            "value":60
+        }  
+    ]
+}

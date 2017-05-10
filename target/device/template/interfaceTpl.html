@@ -1,0 +1,35 @@
+<li id="interface" ng-controller="interfaceCtrl">
+    <div class="title">ovs interface查询</div>
+    <div class="select">
+        查询条件：
+        <select id="firstS" ng-model="firstS" ng-change="selectChange();">
+            <option value="switch ip">switch ip</option>
+            <option value="ipName">switch ip + interface name</option>
+            <option value="PortID">Neutron Port ID</option>
+            <option value="IdIp">租户ID + portIP</option>
+        </select>
+        <input id="SecondS" ng-model="SecondS" >
+        </input>
+        <button>确定</button>
+    </div>
+    <div class="content">
+        <ul class="titleT">
+            <li>ovs mgt IP</li>
+            <li>intface name</li>
+            <li>interface mac</li>
+            <li>ofport</li>
+            <li>rx_packets</li>
+            <li>tx_packets</li>
+            <li>speed</li>
+        </ul>
+        <ul class="listC" ng-repeat="items in interData">
+            <li>{{items.ip}}</li>
+            <li>{{items.intface}}</li>
+            <li>{{items.interface}}</li>
+            <li>{{items.ofport}}</li>
+            <li>{{items.rx}}</li>
+            <li>{{items.tx}}</li>
+            <li>{{items.speed}}</li>
+        </ul>
+    </div>
+</li>

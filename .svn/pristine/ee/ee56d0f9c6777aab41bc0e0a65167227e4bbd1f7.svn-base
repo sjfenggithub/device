@@ -1,0 +1,31 @@
+<li id="openflow" ng-controller="openflowCtrl">
+    <div class="title">openflow查询</div>
+    <div class="select">
+        查询条件：
+        <select id="firstS" ng-model="firstS" ng-change="selectChange();">
+            <option value="dpid">dpid</option>
+            <option value="table id">table id</option>
+            <option value="ofport">ofport</option>
+            <option value="mac地址">mac地址</option>
+        </select>
+        <input id="SecondS" ng-model="SecondS" >
+        </input>
+        <button>确定</button>
+    </div>
+    <div class="content">
+        <ul class="titleT">
+            <li>table ID</li>
+            <li>priority</li>
+            <li>match field</li>
+            <li>instruction field</li>
+            <li>other info</li>
+        </ul>
+        <ul class="listC" ng-repeat="items in openData">
+            <li>{{items.id}}</li>
+            <li>{{items.priority}}</li>
+            <li>{{items.match}}</li>
+            <li>{{items.instruction}}</li>
+            <li>{{items.info}}</li>
+        </ul>
+    </div>
+</li>

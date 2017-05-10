@@ -1,0 +1,206 @@
+package com.yd.util;
+
+import java.net.Authenticator;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import com.yd.model.SwitchNode;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.OutputStream;
+import java.io.OutputStreamWriter;
+import java.io.UnsupportedEncodingException;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.PasswordAuthentication;
+import java.net.URL;
+
+import net.sf.json.JSONArray;
+import net.sf.json.JSONObject;
+public class GetSwitchInfoService {
+	static StringBuilder temp =new StringBuilder();
+	static final String kuser = "admin"; // �û���
+	static final String kpass = "admin"; // ����
+	static final String XMLUrl = "http://192.168.224.26:8181/restconf/operational/network-topology:network-topology/topology/ovsdb:1";
+	static class MyAuthenticator extends Authenticator {
+		@Override
+		public PasswordAuthentication getPasswordAuthentication() {
+			PasswordAuthentication pa = new PasswordAuthentication(kuser,kpass.toCharArray());
+			return pa;
+		}
+	}
+		
+	public  String getXMLDoc(){//����õ�����һ��json��ʽ���ַ�����
+		
+		try {
+//			System.getProperties().setProperty("http.proxyHost", "proxy.cmcc");            
+//			System.getProperties().setProperty("http.proxyPort", "8080");
+			Authenticator.setDefault(new MyAuthenticator());
+			URL url = new URL(XMLUrl);
+			HttpURLConnection connection =(HttpURLConnection) url.openConnection();
+			connection.setDoOutput(true);
+			connection.setRequestMethod("GET");
+			connection.setRequestProperty("Content-Type", "application/yang.data+json");
+			InputStream input = connection.getInputStream();
+//			File file = new File("");
+//			OutputStream output = new FileOutputStream(file);
+			BufferedReader br = new BufferedReader(new InputStreamReader(input));
+//			BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(output));
+			String line=null;
+			while((line=br.readLine())!=null){
+				temp.append(line+"\n");
+			}
+//			bw.flush();
+//			bw.close();
+			br.close();
+			
+		} catch (MalformedURLException e1) {
+			e1.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		return temp.toString();
+	}
+	
+	public List<SwitchNode> getSwitchBean() {
+		List<SwitchNode> list = new ArrayList<SwitchNode>();
+		String type=null;
+		String json = getXMLDoc();
+		JSONObject jsonTopo = JSONObject.fromObject(json);
+		JSONArray jsonArray =jsonTopo.getJSONArray("topology");
+		String topologyId = (String)((JSONObject)jsonArray.get(0)).get("topology-id");
+		//System.out.println(topologyId);
+		if("ovsdb:1".equals(topologyId)){
+			type="vSwitch";
+		}
+		JSONArray nodeArray = ((JSONObject)jsonArray.get(0)).getJSONArray("node");
+		//System.out.println(nodeArray.size());
+		for(int i=0;i<nodeArray.size();i++){
+			JSONObject jsonObj =(JSONObject) nodeArray.get(i);//��ǰnode�ڵ�json���󣬱�ʾ���node����Ϣ
+			String dbVersion = (String)jsonObj.get("ovsdb:db-version");
+			//System.out.println(dbVersion);
+			if(dbVersion!=null){//������node�Ǳ�ʾ������Ϣ��node
+				String UUIDInit =(String) jsonObj.get("node-id");
+				String UUIDLink = getUUID(UUIDInit);
+				//System.out.println(UUIDLink);
+				String name = (String)jsonObj.getJSONObject("ovsdb:connection-info").get("remote-ip");
+				for(int j =0;j<nodeArray.size();j++){
+					//System.out.println(nodeArray.size());
+					JSONObject jsonObj2 = nodeArray.getJSONObject(j);
+					String dbVersion2 = (String)jsonObj2.get("ovsdb:ovs-version");
+					//System.out.println(dbVersion2);
+					if(dbVersion2==null){//�����ýڵ��Ǳ�ʾswitch��Ϣ�Ľڵ�
+						String UUIDSwitch =getUUID((String)jsonObj2.get("node-id"));
+						//System.out.println(UUIDSwitch);
+						if(UUIDSwitch.equals(UUIDLink)){
+							String dpidStr = (String)jsonObj2.get("ovsdb:datapath-id");
+							while(dpidStr.indexOf("00:")==0){
+								dpidStr=dpidStr.substring(3);	
+							}
+							String mac = dpidStr;
+							//��mac��ַ������16���Ƶ��ַ���ʽ����ת����10��������������ַ��ʾ
+							String[] arr = mac.split(":");
+							String dpid="";
+							for(int k=0;k<arr.length;k++){
+								//System.out.println(arr[i]);
+								dpid+=Integer.parseInt(arr[k], 16);
+							}
+							String value = "dpid:"+dpid+"<br/>MAC:"+mac+"<br/>type:"+type;
+							//System.out.println(value);
+							//�����е����Զ��õ�����װ�ɶ���
+							int category = 2;
+							SwitchNode switchNode = new SwitchNode(name,category,value);
+							list.add(switchNode);
+						}
+					}
+				}
+				
+				
+			}
+		}
+		return list;
+	}
+	
+	public String getUUID(String UUIDInit){
+		int index = UUIDInit.indexOf("ovsdb://uuid/");
+		int len1="ovsdb://uuid/".length();
+		int startIndex = index+len1;
+		int len ="f17edca4-fa46-490c-afaf-16c149b9dda7".length();
+		int endIndex = startIndex+len;
+		String nodeUUID = UUIDInit.substring(startIndex, endIndex);
+		String UUID = nodeUUID.replace("-","");
+		return UUID;
+	} 
+	
+	public String getSwitchJson(){
+		List<SwitchNode> list =  getSwitchBean();
+		String switchJsonString =JSONArray.fromObject(list).toString();
+		return switchJsonString;
+	}
+	
+	public String getFileString(){
+		String fileString = "";
+		String line = null;
+		BufferedReader br=null;
+		String path = "/home/catty/apache-tomcat-7.0.61/webapps/device/WEB-INF/classes/json/echartsDemo.json";//��Ҫ�Ķ��ĵط�
+		File file = new File(path);
+		try {
+			InputStream in = new FileInputStream(file);
+			br = new BufferedReader(new InputStreamReader(in,"UTF-8"));
+			while((line=br.readLine())!=null){
+				fileString+=line;
+			}
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (UnsupportedEncodingException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}finally{
+			if(br!=null){
+				try {
+					br.close();
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
+		}
+		return fileString;
+	}
+	
+	public String getUpdateString(){
+		Map<String,Object> map = new HashMap<String,Object>();
+		String initString = JSONObject.fromObject(getFileString()).toString();
+		JSONObject jsonObject = JSONObject.fromObject(getFileString());
+		JSONArray ctrlArray = jsonObject.getJSONArray("Controller");
+		JSONArray NFVArray = jsonObject.getJSONArray("NFV");
+		JSONArray dotArray = jsonObject.getJSONArray("dot");
+		JSONArray edgeArray = jsonObject.getJSONArray("edge");
+		List<SwitchNode> switchList = getSwitchBean();
+		map.put("Controller", ctrlArray);
+		map.put("Switch",switchList);
+		map.put("NFV", NFVArray);
+		map.put("dot", dotArray);
+		map.put("edge", edgeArray);
+		String jsonStr = JSONObject.fromObject(map).toString();
+		System.out.println(jsonStr);
+		return jsonStr;
+	}
+	public static void main(String[] args){
+		GetSwitchInfoService gsis =new GetSwitchInfoService();
+		gsis.getUpdateString();
+	}
+}
